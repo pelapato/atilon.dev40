@@ -120,6 +120,13 @@ button{
   border-radius:20px;
   border-top:solid red 2px;
 }
+#imagen1 {
+  display:flex;
+  position:fixed;
+  top:60px;
+  margin:0px 70%;
+  z-index:-1000;
+}
 @media(max-width:800px){
   #navegation_links{
     display:none;
