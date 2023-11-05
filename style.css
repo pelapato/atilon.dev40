@@ -91,7 +91,7 @@ li{
 /*cena 1 e 2*/
 .cena1{
   color:black;
-  flex:1 1 400px;
+  flex:1 1 600px;
   display:flex;
   background:black;
   width:100%;
@@ -165,7 +165,7 @@ li{
 }
 .cena3{
   position:relative;
-  flex:1 1 400px;
+  flex:1 1 200px;
   width:50%;
   height:100vh;
   color:white;
