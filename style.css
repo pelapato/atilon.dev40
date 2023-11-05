@@ -106,13 +106,13 @@ li{
 #dentro_cena1{
   display:block;
   white-space:nowrap;
-  margin:20% 20%;
+  margin:20% 10%;
   font-size:2rem;
   color:white;
 }
 #dentro_cena2{
   position:absolute;
-  margin:20vh 20%;
+  margin:20vh 10%;
 }
 /*imagens das experiencias*/
 #imagens_xp{
