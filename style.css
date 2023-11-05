@@ -100,19 +100,36 @@ li{
 }
 .cena1:nth-child(2){
   position:relative;
-  background-attachment:fixed;
 }
 /*texto de cena1*/
 #dentro_cena1{
   display:block;
   white-space:nowrap;
-  margin:20% 10%;
+  width:50%;
+  margin:20% 25%;
   font-size:2rem;
   color:white;
 }
+#text_sobre{
+  margin:40px 40px 0px -40px;
+  font-size:0.9rem;
+}
+#btn_mostrar{
+  display:block;
+  padding:10px;
+  margin:30px auto;
+  background:black;
+  border:solid white 2px;
+  color:white;
+}
+#btn_mostrar:hover{
+  background:red;
+  border:solid black .5px;
+  transition:.7s;
+}
 #dentro_cena2{
   position:absolute;
-  margin:20vh 10%;
+  margin:20vh 25%;
 }
 /*imagens das experiencias*/
 #imagens_xp{
@@ -128,10 +145,6 @@ li{
   transition:.5s;
 }
 /*imagen de fundo*/
-#fundo{
-  width:100%;
-  filter:contrast(120%) blur(10px);
-}
 #pefil{
   display:block;
   width:300px;
