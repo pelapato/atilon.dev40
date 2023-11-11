@@ -11,269 +11,167 @@
   font-family:terceira;
   src: url("fonts/Inconsolata-VariableFont_wdth,wght.ttf");
 }
-/*root color*/
-:root{
-  --color-blue:#109AFF;
-  --color-black:linear-gradient(
-  to right,
-  black,
-  black,
-  dimgrey
-  );
+*{
+  margin:0px;
+  padding:0px;
+  border-sizing:border-box;
+}
+body,html{
+  width:100%;
+  height:100vh;
+}
+body{
+  background:black;
+}
+header#navegaao{
+  
+}
+/*Fonts*/
+@font-face {
+  font-family:primeira;
+  src: url("fonts/Poppins-ExtraBoldItalic.ttf");
+}
+@font-face{
+  font-family:segunda;
+  src:url("fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family:terceira;
+  src: url("fonts/Inconsolata-VariableFont_wdth,wght.ttf");
 }
 *{
   margin:0px;
   padding:0px;
   border-sizing:border-box;
 }
-body {
+body,html{
   width:100%;
   height:100vh;
-  background:#e7e7e7;
 }
-#navegation{
-  font-family:terceira;
-  width:100%;
-  height:60px;
+body{
+  background:black;
+}
+header#nave{
+  position:fixed;
+  top:0;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  width:100%;
+  height:70px;
+  border:transparent;
+  font-family:primeira;
+  background:transparent;
+  z-index:1;
 }
-nav{
-  display:flex;
-  align-items:center;
-}
-#navegation_links{
-  display:flex;
-  justify-content:space-around;
-  gap:20px;
-}
-li{
-  list-style:none
-}
-.link{
-  display:flex;
-  align-items:center;
-  position:relative;
-  text-decoration:none;
+.logo{
+  display:block;
+  font-size:1.2rem;
+  font-weight:bold;
   color:black;
 }
-#logo{
-  font-size:1.3rem;
+ul#menu{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  color:white;
+  padding:10px;
+  transition:.6s;
   color:white;
 }
-.cor{
+a:hover{
+  background:blue;
+  color:#CDCFE1;
+}
+/*efeitos de estiliza;ao especiais*/
+.color-blue{
   color:red;
 }
-.linha{
+.color-back{
+  background:blue;
+  color:white;
+  padding:5px;
+  border-radius:10px 20px 20px 10px;
+}
+/*pagina one two*/
+main{
   display:block;
-  width:200px;
-  border-bottom:solid red 5px;
-}
-/*Rede social*/
-#social_rede{
-  display:flex;
-  margin:20px 0px 0px 35%;
-}
-.rede{
-  display:block;
-  width:50px;
-  margin:10px 0px;
-}
-.rede:hover{
-  transform:scale(0.7);
-  transition:.6s;
-}
-/*inicio do site*/
-#grupos_cenas{
-  display:flex;
-  flex-wrap:wrap;
-  width:100%;
-  height:100%;
-}
-/*cena 1 e 2*/
-.cena1{
-  color:black;
-  flex-grow:1;
-  flex-shrink:1;
-  flex-basis:300px;
-  display:flex;
-  background:black;
   width:100%;
   height:100vh;
-  font-family:segunda;
 }
-.cena1:nth-child(2){
-  position:relative;
+#pagina_one_two{
+  margin-top:50px;
+  display:flex;
+  width:100%;
+  height:100vh;
 }
-/*texto de cena1*/
-#dentro_cena1{
-  display:block;
-  white-space:nowrap;
-  width:50%;
-  margin:20% 25%;
-  font-size:2rem;
-  color:black;
-}
-#text_sobre{
-  display:block;
-  font-size:0.9rem;
-}
-#btn_mostrar{
-  display:block;
-  padding:10px;
-  margin:30px auto;
+#pagina_one{
+  display:flex;
+  width:100%;
+  height:100vh;
+  color:white;
   background:black;
-  border:solid white 2px;
+}
+#name{
+  font-size:2.4rem;
+  font-family:segunda;
+  position:relative;
+  left:20%;
+  top:25%;
+}
+#name p{
+  font-size:1rem;
+  margin-top:20px;
+}
+#name a{
+  display:block;
+  text-align:center;
+  width:150px;
+  margin:10px 20%;
+  background:red;
   color:white;
   border-radius:20px;
+  font-family:terceira;
 }
-#btn_mostrar:hover{
-  background:white;
-  color:black;
-  animation:buttonAnimado 1.4s ease-out infinite alternate;
-  transition:.7s;
+#pagina_two{
+  position:relative;
+  width:100%;
+  height:100vh;
+  background-image:url("imagens/pexels.jpg");
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:200% 200%;
+  background-position:center center;
+  color:white;
 }
-@keyframes buttonAnimado{
-  0%{
-    transform:translate(-10px,0px);
-  }
-  100%{
-    transform:translate(10px,0px);
-  }
-}
-#dentro_cena2{
-  margin:20vh 25%;
-}
-/*imagens das experiencias*/
-#imagens_xp{
-  display:flex;
-  margin-top:20px;
-  gap:20px;
-}
-.xp{
-  width:80px;
-}
-.xp:hover{
-  transform:scale(1.5);
-  transition:.5s;
-}
-/*imagen de fundo*/
-#pefil{
+#pefil img{
+  position:absolute;
+  top:calc(55vh - 300px);
+  left:25%;
   display:block;
   width:300px;
-  border:solid 5px;
-  border-radius:50%;
 }
-.text_name{
-  animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
-}
-@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
-/*buttons*/
-#btn_contato{
-  display:flex;
-  padding:5px;
-  background:black;
-  color:white;
-  margin:0px 5px 0px 5px;
-  align-items:center;
-}
-#twitter_contato{
-  filter:invert(100%);
-}
-/*carreia*/
-.carreira_projetos{
-  display:flex;
-  flex-wrap:wrap;
-  width:100%;
-  height:100vh;
-}
-.cena3{
-  position:relative;
-  flex:1 1 400px;
-  width:50%;
-  height:100vh;
-  color:white;
-  background:black;
-}
-.cena3:nth-child(2){
-  background:white;
-}
-/*lado esquerdo cena3*/
-#fundo_one {
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100vh;
-}
-.sombra_efeito{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100vh;
-  opacity:.8;
-  background:black;
-  z-index:100000;
-  transition:.6s;
-}
-.sombra_efeito:hover{
-  display:block;
-  opacity:0.7;
-}
-#slide{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:50vh;
-  background:blue;
-  animation:slide .6s 1 ease-in-out forwards;
-}
-@keyframes slide{
-  100%{
-    transform:translateY(calc(0vh + 50vh));
-    opacity:0;
+@media(max-width:1200px){
+  header#nave{
+    height:50px;
+    font-size:.9rem;
+    background:transparent;
+    border:transparent;
   }
-}
-#text_sobre{
-}
-/*lado direito cena3*/
-#projetos{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-}
-.box{
-  flex:1 1 300px;
-  width:500px;
-  height:400px;
-  color:white;
-  margin:20px;
-  border-radius:20px;
-  padding:10px;
-  background:black;
-  text-align:center;
-}
-.color_blue{
-  background:blue;
-}
-.github{
-  margin-top:10px;
-  width:100px;
- padding:10px;
- background:black;
- color:white;
- border:solid 1px white;
-}
-@media(max-width:600px){
-  .cena1:nth-child(2){
-    height:50%;
+  #menu a{
+    color:white;
   }
-  #dentro_cena2 {
-    position:relative;
-    top:-100px;
-    margin:0px auto;
+  #pagina_one_two{
+    display:block;
+  }
+  #pagina_two{
+    background-size:100% 100%;
+  }
+  #slideY span{
+    width:50px;
+    height:50px;
   }
 }
