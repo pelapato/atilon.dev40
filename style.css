@@ -149,6 +149,9 @@ main{
   top:30px;
   color:blue;
 }
+#pefil h1{
+  font-family:segunda;
+}
 #pefil img{
   position:relative;
   display:block;
@@ -193,6 +196,7 @@ main{
     width:100px;
   }
 }
+
 /*responsividade em dispositiveis de 5-polegadas*/
 @media(max-width:1200px){
   header#nave{
