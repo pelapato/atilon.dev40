@@ -156,20 +156,39 @@ main{
 /*niveis de experiencias*/
 #nivel{
   font-family:segunda;
-  display:flex;
-  flex-direction:column;
   margin:5px 0px 0px 20px;
   width:100%;
   gap:10px;
 }
 #nivel_linguagens{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   list-style:none;
 }
-#nivel_linguagens span:nth-child(n+1){
+/*1px = 4px de 400px*/
+#nivel_linguagens .line:nth-child(n+1){
   display:block;
-  width:100px;
+  width:4px;
   height:5px;
   background:blue;
+  animation:nivel 2s 1 ease-out forwards;
+}
+#nivel_linguagens .line:nth-child(1){
+  width:100px;
+}
+#nivel_linguagens .line:nth-child(2) {
+  width: 200px;
+}
+#nivel_linguagens .line:nth-child(3) {
+  width: 80px;
+}
+@keyframes nivel{
+  50%{
+    width:50px;
+  }
+  100%{
+    width:200px;
+  }
 }
 @media(max-width:1200px){
   header#nave{
