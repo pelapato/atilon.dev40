@@ -49,20 +49,17 @@ body,html{
   height:100vh;
 }
 body{
-  background:black;
+  background:white;
 }
 header#nave{
-  position:fixed;
-  top:0;
   display:flex;
   justify-content:space-between;
   align-items:center;
   width:100%;
-  height:70px;
+  height:50px;
   border:transparent;
   font-family:primeira;
   background:transparent;
-  z-index:1;
 }
 .logo{
   display:block;
@@ -74,13 +71,13 @@ ul#menu{
   display:flex;
   gap:20px;
   list-style:none;
+  color:black;
 }
 a{
   text-decoration:none;
-  color:white;
   padding:10px;
   transition:.6s;
-  color:white;
+  color:black;
 }
 a:hover{
   background:blue;
@@ -88,11 +85,11 @@ a:hover{
 }
 /*efeitos de estiliza;ao especiais*/
 .color-blue{
-  color:red;
+  color:blue;
 }
 .color-back{
-  background:blue;
-  color:white;
+  background:white;
+  color:black;
   padding:5px;
   border-radius:10px 20px 20px 10px;
 }
@@ -101,9 +98,9 @@ main{
   display:block;
   width:100%;
   height:100vh;
+  color:black;
 }
 #pagina_one_two{
-  margin-top:50px;
   display:flex;
   width:100%;
   height:100vh;
@@ -112,14 +109,13 @@ main{
   display:flex;
   width:100%;
   height:100vh;
-  color:white;
-  background:black;
+  background:#e7e7e7;
 }
 #name{
   font-size:2.4rem;
   font-family:segunda;
   position:relative;
-  left:20%;
+  left:10%;
   top:25%;
 }
 #name p{
@@ -131,7 +127,7 @@ main{
   text-align:center;
   width:150px;
   margin:10px 20%;
-  background:red;
+  background:blue;
   color:white;
   border-radius:20px;
   font-family:terceira;
@@ -140,29 +136,20 @@ main{
   position:relative;
   width:100%;
   height:100vh;
-  background-image:url("imagens/pexels.jpg");
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  background-size:200% 200%;
-  background-position:center center;
   color:white;
 }
 #pefil img{
-  position:absolute;
-  top:calc(55vh - 300px);
-  left:25%;
   display:block;
-  width:300px;
+  width:280px;
 }
 @media(max-width:1200px){
   header#nave{
     height:50px;
     font-size:.9rem;
-    background:transparent;
     border:transparent;
   }
   #menu a{
-    color:white;
+    color:black;
   }
   #pagina_one_two{
     display:block;
