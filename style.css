@@ -131,6 +131,11 @@ main{
   color:white;
   border-radius:20px;
   font-family:terceira;
+  transition:.4s;
+}
+#name a:hover{
+  background:#0B1470;
+  cursor:pointer;
 }
 #pagina_two{
   position:relative;
@@ -140,7 +145,7 @@ main{
 }
 #pefil img{
   display:block;
-  width:280px;
+  width:600px;
 }
 @media(max-width:1200px){
   header#nave{
@@ -157,8 +162,8 @@ main{
   #pagina_two{
     background-size:100% 100%;
   }
-  #slideY span{
-    width:50px;
-    height:50px;
+  #pefil img{
+    display:block;
+    width:400px;
   }
 }
