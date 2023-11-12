@@ -137,6 +137,8 @@ main{
   cursor:pointer;
 }
 #pagina_two{
+  position:relative;
+  display:block;
   width:100%;
   height:100vh;
 }
@@ -152,17 +154,16 @@ main{
 }
 /*niveis de experiencias*/
 #nivel{
-  position:relative;
-  display:grid;
+  display:block;
   font-family:segunda;
   margin:5px 0px 0px 20px;
   width:100%;
   grid-gap:20px;
 }
-#nivel_linguagens{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  list-style:none;
+#nivel_linguagens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
 }
 /*1px = 4px de 400px*/
 #nivel_linguagens .line:nth-child(n+1){
@@ -191,20 +192,53 @@ main{
 }
 /*priximas paginas tree(3) and four(4)*/
 #pagina_tree_four{
-  position:relative;
+  display:flex;
+  flex-wrap:wrap;
   width:100%;
   height:100vh;
 }
 #pagina_tree_four #pagina_tree{
-  display:block;
+  flex:1 1 400px;
   width:100%;
-  height:0vh;
+  height:100vh;
+  font-family:segunda;
+}
+#pagina_tree h2{
+  margin:20px 0px 0px 20px;
 }
 #pagina_tree_four #pagina_four{
-  
+  flex:1 1 400px;
   display:block;
   width:100%;
   height:100vh;
+}
+/*projetos pagina-tree*/
+#projetos_flex{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  width:100%;
+  margin-top:20px;
+  gap:20px;
+  font-family:segunda;
+}
+.projeto{
+  display:flex;
+  flex-direction:column;
+  flex: 1 1 200px;
+  text-align:center;
+  justify-content:center;
+  width:200px;
+  height:200px;
+  background:blue;
+  border-radius:5px;
+  box-shadow:0px 0px 2px black;
+  color:white;
+  font-size:0.7rem;
+  transition:.6s;
+}
+.projeto:hover{
+  transform:scale(.5);
 }
 /*responsividade em dispositiveis de 5-polegadas*/
 @media(max-width:1200px){
@@ -217,11 +251,13 @@ main{
     color:black;
   }
   #pagina_one_two{
+    position:relative;
     display:block;
   }
   #pagina_two{
-    height:40px;
-    background-size:100% 100%;
+    display:block;
+    position:relative;
+    height:40vh;
   }
   #pefil img{
     display:block;
@@ -229,6 +265,8 @@ main{
     transform:scale(1.5);
   }
   #pagina_tree_four{
+    position:relative;
+    top:70vh;
     display:block;
   }
 }
