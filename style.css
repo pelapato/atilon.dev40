@@ -176,17 +176,17 @@ main{
   width:100px;
 }
 #nivel_linguagens .line:nth-child(2) {
-  width: 200px;
+  width:100px;
 }
 #nivel_linguagens .line:nth-child(3) {
-  width: 80px;
+  width:80px;
 }
 @keyframes nivel{
   50%{
     width:50px;
   }
   100%{
-    width:150px;
+    width:100px;
   }
 }
 /*priximas paginas tree(3) and four(4)*/
