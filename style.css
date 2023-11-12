@@ -94,6 +94,7 @@ a:hover{
 }
 /*pagina one two*/
 main{
+  position:relative;
   display:block;
   width:100%;
   height:100vh;
@@ -149,6 +150,7 @@ main{
   color:blue;
 }
 #pefil img{
+  position:relative;
   display:block;
   width:600px;
 }
@@ -158,7 +160,7 @@ main{
   font-family:segunda;
   margin:5px 0px 0px 20px;
   width:100%;
-  height:100vh;
+  height:40vh;
   grid-gap:20px;
 }
 #nivel_linguagens {
@@ -191,56 +193,6 @@ main{
     width:100px;
   }
 }
-/*priximas paginas tree(3) and four(4)*/
-#pagina_tree_four{
-  display:flex;
-  flex-wrap:wrap;
-  width:100%;
-  height:100vh;
-}
-#pagina_tree_four #pagina_tree{
-  flex:1 1 400px;
-  width:100%;
-  height:100vh;
-  font-family:segunda;
-}
-#pagina_tree h2{
-  margin:20px 0px 0px 20px;
-}
-#pagina_tree_four #pagina_four{
-  flex:1 1 400px;
-  display:block;
-  width:100%;
-  height:100vh;
-}
-/*projetos pagina-tree*/
-#projetos_flex{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  width:100%;
-  margin-top:20px;
-  gap:20px;
-  font-family:segunda;
-}
-.projeto{
-  display:flex;
-  flex-direction:column;
-  flex: 1 1 100px;
-  text-align:center;
-  justify-content:center;
-  width:100px;
-  height:100px;
-  background:blue;
-  border-radius:5px;
-  box-shadow:0px 0px 2px black;
-  color:white;
-  font-size:0.7rem;
-  transition:.6s;
-}
-.projeto:hover{
-  transform:scale(.5);
-}
 /*responsividade em dispositiveis de 5-polegadas*/
 @media(max-width:1200px){
   header#nave{
@@ -258,16 +210,11 @@ main{
   #pagina_two{
     display:block;
     position:relative;
+    width:100%;
     height:40vh;
   }
   #pefil img{
-    display:block;
-    width:300px;
-    transform:scale(1.5);
-  }
-  #pagina_tree_four{
-    position:relative;
-    top:70vh;
-    display:block;
+    left:20px;
+    width:400px;
   }
 }
