@@ -158,7 +158,7 @@ main{
   font-family:segunda;
   margin:5px 0px 0px 20px;
   width:100%;
-  height:50px;
+  height:100vh;
   grid-gap:20px;
 }
 #nivel_linguagens {
