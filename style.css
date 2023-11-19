@@ -23,175 +23,59 @@ body,html{
 body{
   background:white;
 }
-header#nave{
+section#topoHeader{
+  position:relative;
+  position:fixed;
+  left:0;
   display:flex;
-  justify-content:space-between;
+  overflow:hidden;
+  flex-direction:column;
   align-items:center;
-  width:100%;
-  height:60px;
-  border:transparent;
-  font-family:segunda;
-  background:transparent;
+  width:20%;
+  height:100%;
+  background:black;
+  color:white;
+  gap:30px;
 }
-.logo{
-  display:block;
-  font-size:1.2rem;
-  font-weight:bold;
-  color:black;
-}
-ul#menu{
+#menu,
+#redes,
+#navegation{
   display:flex;
-  gap:20px;
+  flex-direction:column;
+  text-align:center;
+}
+#redes li img {
+  display:flex;
+  width:40px;
+}
+ul{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
   list-style:none;
 }
 a{
-  text-decoration:none;
+  width:150px;
   padding:10px;
-  transition:.6s;
-  color:black;
 }
 a:hover{
   background:blue;
-  color:white !important;
 }
-/*efeitos de estiliza;ao especiais*/
-.color-blue{
-  color:blue;
-}
-.color-back{
-  background:white;
-  color:black;
-  padding:5px;
-  border-radius:10px 20px 20px 10px;
-}
-/*pagina one two*/
-main{
-  position:relative;
+#pefilMenu{
   display:block;
-  width:100%;
-  height:100vh;
-  color:black;
-}
-#pagina_one_two{
-  display:flex;
-  width:100%;
-  height:100vh;
-}
-#pagina_one{
-  display:flex;
-  width:100%;
-  height:100vh;
-  background:#e7e7e7;
-}
-#name{
-  font-size:2.4rem;
-  font-family:segunda;
-  position:relative;
-  left:10%;
-  top:25%;
-}
-#name p{
-  font-size:1rem;
-  margin-top:20px;
-}
-#name a{
-  display:block;
-  text-align:center;
   width:150px;
-  margin:10px 20%;
-  background:blue;
-  color:white;
-  border-radius:20px;
-  font-family:terceira;
-  transition:.4s;
 }
-#name a:hover{
-  background:#0B1470;
-  cursor:pointer;
-}
-#pagina_two{
-  position:relative;
+#fecharMenu{
+  position:absolute;
+  right:0px;
+  top:0px;
   display:block;
-  width:100%;
-  height:100vh;
+  width:25px;
+  filter:invert(100%);
 }
-#pefil{
-  position:relative;
-  left:20px;
-  top:30px;
-  color:blue;
-}
-#pefil h1{
-  font-family:segunda;
-}
-#pefil img{
-  position:relative;
-  display:block;
-  width:600px;
-}
-/*niveis de experiencias*/
-#nivel{
-  display:flex;
-  flex-direction:column;
-  font-family:segunda;
-  margin:5px 0px 0px 5px;
-  width:100%;
-  height:40vh;
-  grid-gap:20px;
-}
-#nivel_linguagens {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  list-style: none;
-}
-/*1px = 4px de 400px*/
-#nivel_linguagens .line:nth-child(n+1){
-  display:block;
-  width:4px;
-  height:5px;
-  background:blue;
-  animation:nivel 2s 1 ease-out forwards;
-}
-#nivel_linguagens .line:nth-child(1){
-  width:100px;
-}
-#nivel_linguagens .line:nth-child(2) {
-  width:100px;
-}
-#nivel_linguagens .line:nth-child(3) {
-  width:80px;
-}
-@keyframes nivel{
-  50%{
-    width:50px;
-  }
-  100%{
-    width:100px;
-  }
-}
-
-/*responsividade em dispositiveis de 5-polegadas*/
-@media(max-width:1200px){
-  header#nave{
-    height:50px;
-    font-size:.9rem;
-    border:transparent;
-  }
-  #menu a{
-    color:black;
-  }
-  #pagina_one_two{
-    position:relative;
-    display:block;
-  }
-  #pagina_two{
-    display:block;
-    position:relative;
-    width:100%;
-    height:40vh;
-  }
-  #pefil img{
-    left:20px;
-    width:400px;
+@media(max-width:1000px){
+  section#topoHeader{
+    display:flex;
+    width:40%;
   }
 }
