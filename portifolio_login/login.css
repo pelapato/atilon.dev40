@@ -94,26 +94,7 @@ form#formulario button{
   right:25%;
   white-space:nowrap;
 }
-#conta{
-  position:relative;
-  top:-30px;
-  width:100%;
-  display:flex;
-  margin:0px 20%;
-}
-a{
+button a{
   color:white;
   text-decoration:none;
-}
-img{
-  display:flex;
-  width:50px;
-  filter:invert(100%);
-  background:red;
-  margin-left:20px;
-  border-radius:50px;
-  transition:.4s;
-}
-img:hover{
-  transform:rotate(1turn);
 }
