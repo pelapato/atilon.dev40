@@ -11,31 +11,54 @@
   font-family:terceira;
   src: url("fonts/Inconsolata-VariableFont_wdth,wght.ttf");
 }
+/*tags especiais de efeito ou outars coisas:*/
+.color_red{
+  color:blue;
+  width:9ch;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:solid black 4px;
+  animation:esc 2s infinite steps(9);
+}
+@keyframes esc{
+  50%{
+    border-right-color:transparent;
+  }
+  100%{
+    width:0;
+  }
+}
+@keyframes escFim{
+  50%{
+    border-right-color:transparent;
+  }
+}
 *{
   margin:0px;
   padding:0px;
   border-sizing:border-box;
 }
-body,html{
+body{
   width:100%;
   height:100vh;
-}
-body{
   background:white;
 }
 section#topoHeader{
-  position:relative;
+  font-family:segunda;
   position:fixed;
-  left:0;
+  top:0;
+  left:-45%;
   display:flex;
   overflow:hidden;
   flex-direction:column;
   align-items:center;
   width:20%;
   height:100%;
-  background:black;
-  color:white;
-  gap:30px;
+  background:ghostwhite;
+  color:black;
+  box-shadow:1px 1px 10px gray;
+  z-index:1;
+  transition:.8s;
 }
 #menu,
 #redes,
@@ -43,10 +66,7 @@ section#topoHeader{
   display:flex;
   flex-direction:column;
   text-align:center;
-}
-#redes li img {
-  display:flex;
-  width:40px;
+  margin-top:30px;
 }
 ul{
   display:flex;
@@ -59,12 +79,14 @@ a{
   padding:10px;
 }
 a:hover{
-  background:blue;
+  text-decoration:underline;
 }
 #pefilMenu{
   display:block;
+  margin:auto auto;
   width:150px;
 }
+/*Mecanismo de menu efeito*/
 #fecharMenu{
   position:absolute;
   right:0px;
@@ -72,10 +94,118 @@ a:hover{
   display:block;
   width:25px;
   filter:invert(100%);
+  background:red;
 }
-@media(max-width:1000px){
+header{
+  display:block;
+  position:relative;
+  left:97%;
+  width:50px;
+  height:50px;
+  background:white;
+}
+/*Menu hamburguer*/
+#hamb{
+  position:absolute;
+  margin:10px 0px 0px 10px;
+  display:flex;
+  flex-direction:column;
+  content:" ";
+  width:25px;
+  height:0;
+  border:solid blue 2px;
+}
+#hamb::after ,
+#hamb::before{
+  position:relative;
+  display: block;
+  content: " ";
+  width:25px;
+  margin-top:7px;
+  border:solid blue 2px;
+}
+#topoHeader.active{
+  display:block;
+  position:fixed;
+  top:0;
+  left:0%;
+  transition:.8s;
+}
+/*corpo da web*/
+main{
+  display:block;
+  width:100%;
+  height:100vh;
+}
+section#paginas{
+  display:flex;
+  width:100%;
+  height:100vh;
+  background:white;
+}
+div#pagina_one{
+  position:relative;
+  width:100%;
+  height:100vh;
+  font-family:segunda;
+  color:black;
+}
+div#pagina_two{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100vh;
+}
+div#pagina_one article#name{
+  position:relative;
+  left:15%;
+  top:25%;
+  font-size:1.7rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+div#pagina_one article#name a{
+  color:blue;
+}
+div#pagina_one article#name a:hover{
+  text-decoration-color:blue;
+  cursor:pointer;
+}
+div#pagina_one article#name p{
+  font-size:1rem;
+}
+/*Segunda paginaTwo*/
+#pagina_two img#pefil{
+  width:45%;
+}
+#pagina_two article div{
+  width:90%;
+  font-family:segunda;
+  display:flex;
+  flex-direction:column; 
+  align-items:center;
+  background:#e7e7e7;
+  border-radius:0px 10px;
+  box-shadow:0px 0px 5px gray;
+}
+@media(max-width:900px){
+  header {
+    display: block;
+    position: relative;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    background: white;
+  }
   section#topoHeader{
     display:flex;
-    width:40%;
+    width:45%;
+  }
+  section#paginas{
+    display:flex;
+    flex-direction:column;
   }
 }
