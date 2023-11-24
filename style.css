@@ -39,6 +39,7 @@
   border-sizing:border-box;
 }
 body{
+  display:block;
   width:100%;
   height:100vh;
   background:white;
@@ -158,6 +159,14 @@ div#pagina_two{
   width:100%;
   height:100vh;
 }
+#paginaProjetos{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100vh;
+}
 div#pagina_one article#name{
   position:relative;
   left:15%;
@@ -179,7 +188,7 @@ div#pagina_one article#name p{
 }
 /*Segunda paginaTwo*/
 #pagina_two img#pefil{
-  width:45%;
+  width:65%;
 }
 #pagina_two article div{
   width:90%;
@@ -187,9 +196,15 @@ div#pagina_one article#name p{
   display:flex;
   flex-direction:column; 
   align-items:center;
-  background:#e7e7e7;
+  text-align:center;
+  background:white;
   border-radius:0px 10px;
-  box-shadow:0px 0px 5px gray;
+  box-shadow:0px 0px 5px blue;
+}
+#pagina_two article div h2{
+  background:blue;
+  color:white;
+  border-radius:0px 0px 10px 10px;
 }
 @media(max-width:900px){
   header {
