@@ -1,16 +1,4 @@
-/*Fonts*/
-@font-face {
-  font-family:primeira;
-  src: url("fonts/Poppins-ExtraBoldItalic.ttf");
-}
-@font-face{
-  font-family:segunda;
-  src:url("fonts/Poppins-ExtraBold.ttf");
-}
-@font-face {
-  font-family:terceira;
-  src: url("fonts/Inconsolata-VariableFont_wdth,wght.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 /*tags especiais de efeito ou outars coisas:*/
 .color_red{
   color:blue;
@@ -42,110 +30,70 @@ body{
   display:block;
   width:100%;
   height:100vh;
+  font-family: 'Titillium Web', sans-serif;
   background:white;
 }
 section#topoHeader{
   font-family:segunda;
   position:fixed;
   top:0;
-  left:-45%;
   display:flex;
-  overflow:hidden;
-  flex-direction:column;
   align-items:center;
-  width:20%;
-  height:100%;
-  background:ghostwhite;
+  justify-content:space-between;
+  width:100%;
+  height:40px;
+  background:transparent;
   color:black;
-  box-shadow:1px 1px 10px gray;
+  box-shadow:.1px .2px 3px gray;
+  gap:10px;
   z-index:1;
   transition:.8s;
-}
-#menu,
-#redes,
-#navegation{
-  display:flex;
-  flex-direction:column;
-  text-align:center;
-  margin-top:30px;
-}
-ul{
-  display:flex;
-  flex-direction:column;
-  gap:40px;
-  list-style:none;
-}
-a{
-  width:150px;
-  padding:10px;
-}
-a:hover{
-  text-decoration:underline;
-}
-#pefilMenu{
-  display:block;
-  margin:auto auto;
-  width:150px;
-}
+  }
+  #menu{
+    display:flex;
+    text-align:center;
+  }
+  ul{
+    display:flex;
+    list-style:none;
+  }
+  a{
+    width:50px;
+    padding:10px;
+    color:black;
+  }
+  a:hover{
+    text-decoration:underline;
+  }
+  #pefilMenu{
+    display:none;
+  }
+  #fecharMenu{
+    display:none;
+  }
 /*Mecanismo de menu efeito*/
-#fecharMenu{
-  position:absolute;
-  right:0px;
-  top:0px;
-  display:block;
-  width:25px;
-  filter:invert(100%);
-  background:red;
-}
-header{
-  display:block;
-  position:relative;
-  left:97%;
-  width:50px;
-  height:50px;
-  background:white;
-}
+  header{
+    display:none;
+  }
 /*Menu hamburguer*/
-#hamb{
-  position:absolute;
-  margin:10px 0px 0px 10px;
-  display:flex;
-  flex-direction:column;
-  content:" ";
-  width:25px;
-  height:0;
-  border:solid blue 2px;
-}
-#hamb::after ,
-#hamb::before{
-  position:relative;
-  display: block;
-  content: " ";
-  width:25px;
-  margin-top:7px;
-  border:solid blue 2px;
-}
-#topoHeader.active{
-  display:block;
-  position:fixed;
-  top:0;
-  left:0%;
-  transition:.8s;
-}
+  #hamb{
+    display:none;
+  }
 /*corpo da web*/
 main{
   display:block;
   width:100%;
   height:100vh;
+  font-family: 'Roboto Mono', monospace;
 }
 section#paginas{
   display:flex;
+  flex-direction:row;
   width:100%;
   height:100vh;
   background:white;
 }
 div#pagina_one{
-  position:relative;
   width:100%;
   height:100vh;
   font-family:segunda;
@@ -158,23 +106,17 @@ div#pagina_two{
   align-items:center;
   width:100%;
   height:100vh;
-}
-#paginaProjetos{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  height:100vh;
+  color:black;
 }
 div#pagina_one article#name{
   position:relative;
-  left:15%;
+  left:10%;
   top:25%;
   font-size:1.7rem;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  margin-bottom:100px;
 }
 div#pagina_one article#name a{
   color:blue;
@@ -185,35 +127,156 @@ div#pagina_one article#name a:hover{
 }
 div#pagina_one article#name p{
   font-size:1rem;
+  margin-top:10px;
 }
 /*Segunda paginaTwo*/
 #pagina_two img#pefil{
-  width:65%;
+  display:block;
+  margin:auto;
+  width:55%;
 }
 #pagina_two article div{
-  width:90%;
-  font-family:segunda;
+  width:100%;
+  font-family: 'Titillium Web', sans-serif;
   display:flex;
   flex-direction:column; 
+  justify-content:center;
   align-items:center;
-  text-align:center;
-  background:white;
-  border-radius:0px 10px;
-  box-shadow:0px 0px 5px blue;
+  margin:10px 10px 0px 10px;
+  gap:5px;
 }
 #pagina_two article div h2{
-  background:blue;
-  color:white;
+  background:#e7e7e7;
+  color:black;
   border-radius:0px 0px 10px 10px;
 }
-@media(max-width:900px){
-  header {
-    display: block;
-    position: relative;
-    left: 90%;
-    width: 50px;
-    height: 50px;
-    background: white;
+#paginasDosProjetos{
+  display:flex;
+  width:100%;
+  height:100vh;
+}
+.paginaDeProjetos{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  width:100%;
+  height:100vh;
+  gap:10px;
+}
+#cardHTML,
+#cardCSS,
+#cardJS{
+  width:200px;
+  height:200px;
+  flex:1 1 100px;
+  background:blue;
+  padding:10px;
+  color:white;
+  background-position:300px;
+  border:solid 5px transparent;
+  border-image:linear-gradient(
+  45deg,
+  #3500FF,
+  #3500FF,
+  #AD0BD4) 1;
+}
+#paginaDeProjetos{
+  display:flex;
+}
+/*Menor de 900px*/
+@media(max-width:550px){
+  section#topoHeader{
+  font-family:segunda;
+  position:fixed;
+  top:0;
+  left:-45%;
+  display:flex;
+  overflow:hidden;
+  flex-direction:column;
+  align-items:center;
+  width:34%;
+  height:100%;
+  background:ghostwhite;
+  color:black;
+  box-shadow:1px 1px 10px gray;
+  z-index:1;
+  transition:.8s;
+  }
+  #menu,
+  #redes,
+  #navegation{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    margin-top:20px;
+  }
+  ul{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    list-style:none;
+  }
+  a{
+    width:50px;
+    padding:10px;
+  }
+  a:hover{
+    text-decoration:underline;
+  }
+  #pefilMenu{
+    display:block;
+    margin:auto auto;
+    width:150px;
+  }
+/*Mecanismo de menu efeito*/
+  #fecharMenu{
+    position:absolute;
+    right:0px;
+    top:0px;
+    display:block;
+    width:25px;
+    filter:invert(100%);
+    background:red;
+  }
+  header{
+    display:block;
+    position:absolute;
+    left:80%;
+    width:25px;
+    height:0;
+    background:white;
+    z-index:1000;
+  }
+/*Menu hamburguer*/
+  #hamb{
+    position:relative;
+    margin:10px 0px 0px 10px;
+    display:flex;
+    flex-direction:column;
+    content:"";
+    width:25px;
+    height:0;
+    border:solid blue 2px;
+  }
+  #hamb::after ,
+  #hamb::before{
+    position:relative;
+    display:block;
+    content:"";
+    width:25px;
+    margin-top:7px;
+    border:solid blue 2px;
+  }
+  #topoHeader.active{
+    display:block;
+    position:fixed;
+    top:0;
+    left:0%;
+    transition:.8s;
+  }
+  #topoHeader h1{
+    display:none;
   }
   section#topoHeader{
     display:flex;
