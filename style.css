@@ -173,12 +173,15 @@ div#pagina_one article#name p{
 }
 .paginaDeProjetos:nth-child(2){
   display:flex;
+  margin-top:60px;
   justify-content:center;
   align-items:center;
 }
 #cardHTML,
 #cardCSS,
 #cardJS{
+  display:flex;
+  flex-direction:column;
   width:200px;
   height:200px;
   flex:1 1 200px;
