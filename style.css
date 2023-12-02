@@ -300,7 +300,7 @@ div#pagina_one article#name p{
     display:block;
     content:"";
     width:25px;
-    margin-top:7px;
+    margin:6px 0px 0px -1px;
     border:solid blue 2px;
   }
   #topoHeader.active{
