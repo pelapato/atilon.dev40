@@ -163,26 +163,22 @@ div#pagina_one article#name p{
 #paginasDosProjetos{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
   background:blue;
   width:100%;
-  height:100vh;
+  height:100%;
 }
 .paginaDeProjetos{
   display:flex;
-  align-items:center;
-  justify-content:center;
   flex-wrap:wrap;
   width:100%;
-  height:100vh;
+  height:100%;
   background:#e7e7e7;
 }
 .paginaDeProjetos:nth-child(2){
   display:flex;
-  
   justify-content:center;
   align-items:center;
-  margin-top:60px;
+  margin-top:0px;
 }
 #cardHTML,
 #cardCSS,
@@ -191,7 +187,7 @@ div#pagina_one article#name p{
   flex-direction:column;
   width:200px;
   height:200px;
-  flex:1 1 200px;
+  flex:1 1 100px;
   color:white;
   text-align:center;
   align-items:center;
