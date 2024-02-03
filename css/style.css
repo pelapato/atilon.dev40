@@ -46,9 +46,11 @@ header > div > button,.btn{
   font-weight:600;
   border-radius:20px;
   color:white;
+  transition:.4s
 } 
 header > div > button:hover
 ,.btn:hover{
+  transform:scale(1.06);
   box-shadow:0px 0px 8px blue;
   cursor:pointer;
 }
@@ -72,7 +74,7 @@ section.interface{
 .txt{
   margin-top:10%;
   width:100%;
-  margin-left:20px;
+  margin-left:50px;
 }
 .foto{
   display:block;
@@ -106,6 +108,9 @@ section.interface > .txt > h1>span{
   section.interface{
     flex-direction:column;
   }
+  section.interface > .txt{
+    margin-left:20px;
+  }
   section.interface > .txt > h1{
     font-size:1.4rem;
   }
@@ -114,14 +119,15 @@ section.interface > .txt > h1>span{
   }
 }
 .sobre{
-  margin:50px 0px;
+  margin:100px 0px;
   text-align:center;
   color:#fff;
+  text-align:center;
 }
 .sobre > h1{
   font-size:2rem;
   font-weight:800;
-  margin:40px 0px;
+  margin:50px 0px;
 }
 .sobre > article > div > h1{
   margin:20px 0px;
@@ -130,6 +136,9 @@ section.interface > .txt > h1>span{
   font-size:1.2rem;
   text-align:start;
   margin:20px 0px;
+}
+.sobre > article > div > h2{
+  font-size:2rem;
 }
 .sobre  .destaque{
   color:blue;
@@ -148,7 +157,7 @@ section.interface > .txt > h1>span{
 }
 .sobre > article > div{
   box-shadow:0px 0px 1px blue;
-  padding:10px;
+  padding:35px;
   border-radius:10px;
   transition:.4s;
 }
@@ -156,14 +165,14 @@ section.interface > .txt > h1>span{
   box-shadow:0px 0px 6px blue;
   transform:scale(1.05);
 }
-@media (max-width:600px) {
+@media (max-width:500px) {
   .sobre > h1{
     font-size:1.5rem;
   }
   .sobre > article{
     flex-direction:column;
     justify-content:space-between;
-    height:100vh;
+    height:100%;
   }
   .sobre > article > div>p{
     font-size:1rem;
@@ -184,7 +193,7 @@ section.interface > .txt > h1>span{
 .falando-de-min{
   flex-direction:column;
   font-weight:600;
-  margin:0px 20px;
+  margin:0px 50px;
 }
 .falando-de-min > h1{
   font-size:1.9rem;
@@ -212,4 +221,63 @@ section.interface > .txt > h1>span{
   .interface > div.foto-sobre > img{
     width:100%;
   }
+}
+.fale-comigo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  margin:35px 0px;
+}
+.fale-comigo > .interface >  h1{
+  color:blue;
+  margin:35px 0px;
+  font-size:2rem;
+}
+.fale-comigo > .interface > form>input{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  box-shadow:0px 0px 3px gray;
+  background:black;
+  margin-bottom:20px;
+  outline:none;
+  opacity:0.9;
+  color:gray;
+  transition:4s;
+}
+.fale-comigo > > form> input:hover{
+  opacity:1;
+}
+.fale-comigo > .interface > form{
+  display:flex;
+  flex-direction:column;
+  padding:25px;
+}
+footer{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:35px;
+  color:#fff;
+  padding:40px 0px;
+  box-shadow:0px -1px 14.7px gray;
+}
+footer> h3{
+  font-size:1.3rem;
+  margin-left:20px;
+}
+footer > hr{
+  width:100%;
+  margin:20px 0px;
+  background:blue;
+}
+footer > p{
+  display:flex;
+  align-items:center;
+  margin-left:20px;
+}
+.footer > p> span{
+  color:blue;
 }
