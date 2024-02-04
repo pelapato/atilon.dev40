@@ -6,6 +6,11 @@
   <!--INICIO DO GLOOGLE SIMBYLS-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!--FIM DO GLOOGLE SIMBYLS-->
+  
+  <!--Inicio da CDN ScrollReveal-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="../js/reveal.js" defer></script>
+  <!--Fim da CDN-->
   <link rel="stylesheet" href="../css/style.css">
   <title>Portifolio futuro_dev_atilon</title>
 </head>
@@ -13,7 +18,10 @@
   <header>
     <h1></h1>
     <nav>
-      <ul>
+      <ul class="nav">
+        <span class="material-symbols-outlined" id="btn_fechar">
+        close
+        </span>
         <li><a href="#">inicio</a></li>
         <li><a href="#">especialista</a></li>
         <li><a href="#">projetos</a></li>
@@ -32,27 +40,27 @@
         <button class="btn">Entrar em contato</button>
       </div>
       <div class="foto">
-        <img src="../imagens/Picsart_23-11-06_17-51-59-859.png" id="criado"/>
+        <img src="../imagens/Picsart_23-11-06_17-51-59-859.png" id="criado" class="criado"/>
       </div>
     </section>
     <section class="sobre">
-      <h1>MINHAS <span class="destaque">ESPECIALIDADES</span></h1>
+      <h1 class="text">MINHAS <span class="destaque">ESPECIALIDADES</span></h1>
       <article>
-        <div>
+        <div class="div pt-1">
           <span class="material-symbols-outlined">
             code
           </span>
           <h2>WEB</h2>
           <p>Code para aqulees que acreditam<br>sendo:criativo e protagonista</p>
         </div>
-        <div>
+        <div class="div pt-2">
           <span class="material-symbols-outlined">
             shopping_cart
           </span>
           <h2>LOJA VIRTUAL</h2>
           <p>Como programador fullstck<br> devo postar sites que voce goste.</p>
         </div>
-        <div>
+        <div class="div pt-3">
           <span class="material-symbols-outlined">
             language
           </span>
@@ -63,7 +71,7 @@
     </section>
     <section class="interface">
       <div class="foto-sobre">
-        <img src="../imagens/pexels-djordje-petrovic-2102416.jpg" alt="imagenProgrmador"/>
+        <img src="../imagens/pexels-djordje-petrovic-2102416.jpg" alt="imagenProgrmador" class="img"/>
       </div>
       <div class="falando-de-min">
         <h1>PRAZER EU SOU,<BR><span class="destaque">ATILON PEREIRA.</span></h1>
@@ -79,13 +87,13 @@
     </section>
     <section class="fale-comigo">
       <div class="interface">
-        <h1>FALA COMIGO.</h1>
-        <form action="https://formsubmit.co/atilonpereira337@gmail.com" method="POST">
-          <input type="text" placeholder="Seu nome"  required/>
-          <input type="text" placeholder="Seu e-mail" required/>
-          <input type="number" placeholder="Seu celular" required/>
+        <h1 class="fala">FALA COMIGO.</h1>
+        <form action="https://formsubmit.co/jhonbest170@gmail.com" method="POST">
+          <input type="text" placeholder="Seu nome" class="input pt-1"  required/>
+          <input type="text" placeholder="Seu e-mail" class="input pt-2"  required/>
+          <input type="number" placeholder="Seu celular" class="input pt-3" required/>
           <input type="text" cols="30" rows="10" name="menssage" placeholder="Sua menssagem" required/>
-          <button class="btn">ENVIAR</button>
+          <button class="btn" class="input pt-4">ENVIAR</button>
           
           <input type="hidden" name="_subject" value="NOVO CONTATO"/>
           <input type="text" name="_honey" style="display:none"/>
@@ -100,7 +108,11 @@
         mail
       </span>atilonpereira337@gmail.com</p>
     </footer>
+    <div class="menu">
+    <span class="material-symbols-outlined" id="btn_abrir">
+      menu
+    </span>
+    </div>
   </main>
-  <script src="../js/main.js"></script>
 </body>
 </html>
