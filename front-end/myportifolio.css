@@ -185,7 +185,7 @@ section#inicio > div.cena-intro h1{
   font-size:1.6rem;
 }
 section#inicio > div.cena-intro p:nth-child(4) > .efeito-texto{
-  font-size:1.2rem;
+  font-size:.9rem;
   color:rgb(1, 255, 107);
 }
 section#inicio > div.cena-intro  .btn-curriculo{
@@ -265,7 +265,7 @@ section#timeline{
     margin-left:20px;
   }
   #habilidades_technologias > h1{
-    font-size:1.2rem;
+    font-size:.9rem;
     margin-left:20px;
   }
   #habilidades_technologias > div{
