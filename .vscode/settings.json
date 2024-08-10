@@ -1,0 +1,7 @@
+{
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "window.confirmSaveUntitledWorkspace": false,
+    "explorer.expandSingleFolderWorkspaces": false,
+    "markdown.editor.drop.copyIntoWorkspace": "never",
+    "markdown.editor.filePaste.copyIntoWorkspace": "never"
+}
