@@ -136,7 +136,6 @@ section#inicio > div.cena-intro  p:nth-child(1){
   display:flex;
   white-space:nowrap;
   align-items:center;
-  font-size:1.1rem;
   font-weight:400;
   width:0ch;
   height:20px;
@@ -185,7 +184,6 @@ section#inicio > div.cena-intro h1{
   font-size:1.6rem;
 }
 section#inicio > div.cena-intro p:nth-child(4) > .efeito-texto{
-  font-size:.9rem;
   color:rgb(1, 255, 107);
 }
 section#inicio > div.cena-intro  .btn-curriculo{
