@@ -286,11 +286,11 @@ section#timeline{
   }
 }
 
-/*animation cdn*/
+/*animation cdn*/xx
 /*estilo js*/
 .menu_visibility{
   display:flex;
-  width:50%;  
+  width:80%;  
   background:rgb(12, 12, 34);
   border-left:solid 4px rgb(1, 255, 107);
   box-shadow:-90px 0px 700px  black;
