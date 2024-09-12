@@ -1,14 +1,3 @@
-window.revelar = ScrollReveal({reset:true})
-
-revelar.reveal(".txt-layout",{
-    duration:400,
-    distance:"60px"
-})
-revelar.reveal(".txt-card",{
-    duration:800,
-    distance:"60px"
-})
-
 const menu = document.querySelector(".text_menu")
 const nav = document.querySelector("nav")
 var verify = 1
@@ -19,7 +8,7 @@ varX.setAttribute('href','#logo')
 const imgRolagem_Topo =document.createElement('img')
 const ativar_pesquisa=document.querySelector("div#sobre > i")
 const pesquisar=document.querySelector("div#sobre  div")
-
+const fechar=document.querySelector("span#fechar")
 
 imgRolagem_Topo.setAttribute('src','./src/imagens/chevron-up.svg')
 document.querySelector("body").appendChild(cima)
@@ -38,7 +27,9 @@ menu.addEventListener('click',()=>{
     }
 })
 
-
+fechar.addEventListener('click',()=>{
+  nav.classList.remove("menu_visibility")
+})
 //Efeito de barra de pesquisa
 var ativar = 1
 ativar_pesquisa.addEventListener('click',()=>{
