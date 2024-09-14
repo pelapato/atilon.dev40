@@ -6,8 +6,6 @@ cima.setAttribute('id','Rolagem_Topo')
 const varX = document.createElement("a")
 varX.setAttribute('href','#logo')
 const imgRolagem_Topo =document.createElement('img')
-const ativar_pesquisa=document.querySelector("div#sobre > i")
-const pesquisar=document.querySelector("div#sobre  div")
 const fechar=document.querySelector("span#fechar")
 
 imgRolagem_Topo.setAttribute('src','./src/imagens/chevron-up.svg')
@@ -30,8 +28,4 @@ menu.addEventListener('click',()=>{
 fechar.addEventListener('click',()=>{
   nav.classList.remove("menu_visibility")
 })
-//Efeito de barra de pesquisa
-var ativar = 1
-ativar_pesquisa.addEventListener('click',()=>{
-    pesquisar.style.display="flex"
-})
+//Efeito de zoom,decendo na imagen

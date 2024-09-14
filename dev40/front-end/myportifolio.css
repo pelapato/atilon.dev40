@@ -353,9 +353,32 @@ section#projetos > hr.line{
   width:100%;
   height:100%;
   flex-wrap:wrap;
-  gap:20px;
+  gap:30px;
 }
-#todos_os_projetos > .web_projeto > h6{
+#todos_os_projetos > .web_projeto   div.fundo-animado{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:150px;
+  background:url('src/imagens/todo-app-preview-computer.jpg');
+  background-repeat:no-repeat;
+  background-size:380px;
+  transition:600ms;
+}
+#todos_OS_projetos > .web_projeto  div.fundo-animado::after{
+  display:block;
+  content:"";
+  width:100%;
+  height:100%;
+  background-image:linear-gradient(to bottom,transparent,rgba(27, 27, 27, 0.349),rgba(0, 0, 0, 0.781));
+}
+#todos_OS_projetos > .web_projeto  div.fundo-animado:hover{
+  background-position-y:-70px;
+}
+#todos_os_projetos > .web_projeto  h6{
+  position:absolute;
   display:flex;
   align-items:center;
   flex-direction:column;
@@ -367,7 +390,7 @@ section#projetos > hr.line{
   flex-wrap:wrap;
   justify-content:center;
   width:350px;
-  height:230px;
+  height:350px;
   margin-top:20px;
   background:rgb(3, 3, 15);
   border-radius:10px 20% 0px 0px;
