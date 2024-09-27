@@ -268,7 +268,7 @@ hr.linha,.line{
 section#inicio > div.cena-intro h1{
   font-size:1.6rem;
 }
-section#inicio > div.cena-intro p:nth-child(4) > .efeito-texto{
+.efeito-texto{
   font-size:1.03rem;
   color:rgb(1, 255, 107);
 }
@@ -382,13 +382,13 @@ section#projetos > hr.line{
   display:flex;
   align-items:center;
   flex-direction:column;
-  font-size:1rem;
+  font-size:.8rem;
+  font-weight:700;
 }
-#todos_os_projetos > .web_projeto > h6{
-  display:flex;
-  flex-direction:column;
+#todos_os_projetos > .web_projeto  h6 > strong{
+  font-weight:500;
+  font-size:.8rem;
 }
-
 #todos_os_projetos > .web_projeto{
   display:flex;
   align-items:center;
