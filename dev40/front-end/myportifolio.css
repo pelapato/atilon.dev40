@@ -168,7 +168,7 @@ section#inicio{
   width:100%;
 }
 /*lado direito e esquerdo*/
-section#inicio > div,section#projetos{
+section#inicio > div,section#projetos,section#sobre-mim{
   width:100%;
   height:90vh;
 }
@@ -326,7 +326,7 @@ section#projetos  div#sobre{
   padding:5px 0px;
 }
 section#projetos{
-  margin-top:30px;
+  margin-top:20px;
 }
 section#projetos  div#sobre > div{
   display:none;
@@ -369,9 +369,6 @@ section#projetos > hr.line{
   position:relative;
   left:40%;
   width:20px;
-}
-div.fundo-animado::nth-child(3) > img{
-  width:400px;
 }
 #todos_OS_projetos > .web_projeto  div.fundo-animado::after{
   display:block;
