@@ -370,6 +370,9 @@ section#projetos > hr.line{
   left:40%;
   width:20px;
 }
+div.fundo-animado::nth-child(3) > img{
+  width:400px;
+}
 #todos_OS_projetos > .web_projeto  div.fundo-animado::after{
   display:block;
   content:"";
