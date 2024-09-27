@@ -363,9 +363,12 @@ section#projetos > hr.line{
   width:100%;
   height:150px;
   background-repeat:no-repeat;
-  background-image: url("src/imagens/one-pince.png");
-  background-size:380px;
-  transition:600ms;
+  overflow:hidden;
+}
+#todos_os_projetos > .web_projeto   div.fundo-animado  img{
+  position:relative;
+  left:40%;
+  width:20px;
 }
 #todos_OS_projetos > .web_projeto  div.fundo-animado::after{
   display:block;
@@ -374,10 +377,6 @@ section#projetos > hr.line{
   height:100%;
   background-image:linear-gradient(to bottom,transparent,rgba(27, 27, 27, 0.349),rgba(0, 0, 0, 0.781));
 }
-#todos_OS_projetos > .web_projeto  div.fundo-animado:hover{
-  transform:scale(1.1);
-  background-position-y:-50px;
-}
 #todos_os_projetos > .web_projeto  h6{
   position:absolute;
   display:flex;
@@ -385,6 +384,11 @@ section#projetos > hr.line{
   flex-direction:column;
   font-size:1rem;
 }
+#todos_os_projetos > .web_projeto > h6{
+  display:flex;
+  flex-direction:column;
+}
+
 #todos_os_projetos > .web_projeto{
   display:flex;
   align-items:center;

@@ -1,12 +1,14 @@
-const menu = document.querySelector(".text_menu")
-const nav = document.querySelector("nav")
-var verify = 1
-const cima = document.createElement("strong")
+let nav,menu,clima,varX,imgRolagem_Topo,fechar
+
+menu = document.querySelector(".text_menu")
+nav = document.querySelector("nav")
+verify = 1
+cima = document.createElement("strong")
 cima.setAttribute('id','Rolagem_Topo')
-const varX = document.createElement("a")
+varX = document.createElement("a")
 varX.setAttribute('href','#logo')
-const imgRolagem_Topo =document.createElement('img')
-const fechar=document.querySelector("span#fechar")
+imgRolagem_Topo =document.createElement('img')
+fechar=document.querySelector("span#fechar")
 
 imgRolagem_Topo.setAttribute('src','./src/imagens/chevron-up.svg')
 document.querySelector("body").appendChild(cima)
@@ -28,4 +30,4 @@ menu.addEventListener('click',()=>{
 fechar.addEventListener('click',()=>{
   nav.classList.remove("menu_visibility")
 })
-//Efeito de zoom,decendo na imagen
+//
