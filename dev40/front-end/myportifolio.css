@@ -375,7 +375,8 @@ section#projetos > hr.line{
   background-image:linear-gradient(to bottom,transparent,rgba(27, 27, 27, 0.349),rgba(0, 0, 0, 0.781));
 }
 #todos_OS_projetos > .web_projeto  div.fundo-animado:hover{
-  background-position-y:-70px;
+  transform:scale(1.1);
+  background-position-y:-50px;
 }
 #todos_os_projetos > .web_projeto  h6{
   position:absolute;
