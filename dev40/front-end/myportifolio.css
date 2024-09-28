@@ -500,7 +500,7 @@ section#projetos > hr.line{
   width:50px;
   height:50px;
   border-radius:50%;
-  border:solid 4px rgb(1,255,107);
+  border:solid 3px rgb(1,255,107);
   box-shadow:0px 0px 1px rgb(1,243,107);
 }
 @keyframes circle-aniamdo {
