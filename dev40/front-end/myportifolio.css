@@ -455,7 +455,7 @@ section#projetos > hr.line{
 #sobremim  h3{
   text-transform:uppercase;
 }
-#sobremim  hr.line{
+#sobremim  hr.line,#contato hr{
   display:block;
   height:0px;
   width:100px;
@@ -518,6 +518,54 @@ section#projetos > hr.line{
   font-size:.8rem;
   margin-top:10px !important;
   color:#e7e7e7a6;
+}
+section#contato{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  width:100%;
+  gap:10px;
+}
+section#contato >form{
+  display:flex;
+  align-items:center;
+  text-align:left;
+  flex-wrap:wrap;
+  flex-direction:column;
+  gap:5px;
+} 
+section#contato > form >input,textarea{
+  padding:10px 7px;
+  width:250px;
+  height:35px;
+  border:solid .1px rgba(1, 255, 107, 0.342);
+  background:none;
+  border-radius:20px 0px 0px 0px;
+  color:white;
+  outline:none;
+} 
+section#contato > form > textarea{
+  padding-bottom:70px;
+}
+section#contato > form >label{
+  display:flex;
+  width: 100%;
+  margin-left:10px;
+  font-weight:200;
+  font-size:.8rem;
+}
+section#contato > form >button{
+  border:solid .4px black;
+  padding:5px 8px;
+  color:white;
+  font-weight:bold;
+  width:100px;
+  height:40px;
+  border-radius:20px;
+  background:RGB(1,255,107);
+  margin-top:30px;
+  cursor: pointer;
 }
 @media(max-width:700px){
   section#inicio{
