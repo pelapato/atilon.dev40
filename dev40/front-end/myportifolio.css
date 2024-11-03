@@ -28,7 +28,8 @@ header{
   color:white;
 }
 div#marca > p#logo{
-  font-size:17px;
+  font-size:18px;
+  font-family:"Poppins",sans-seri;
 }
 strong.destaque-cor{
   color:var(--green-1);
@@ -53,4 +54,15 @@ div > button#contato_butao{
   background:var(--green-1);
   color:white;
   margin-left:20px;
+}
+@media(max-width:600px){
+  header{
+    height:60px;
+  }
+  div#marca > p#logo{
+    font-size:14px;
+  }
+  ul#links{
+    display:none;
+  }
 }
