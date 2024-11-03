@@ -19,6 +19,21 @@ header{
   justify-content:space-around;
   width:100%;
   height:80px;
-  background:red;
   font-family:"Raleway",sans-serif;
+  color:white;
+}
+div#marca > p#logo{
+  font-size:17px;
+}
+strong.destaque-cor{
+  color:rgb(30, 255, 0);
+  font-weight:bold;
+}
+ul#links{
+  display:flex;
+  align-items:center;
+  width:400px;
+  font-size:.9rem;
+  list-style:none;
+  gap:15px;
 }
