@@ -41,14 +41,14 @@ ul#links{
   font-size:.9rem;
   list-style:none;
   color:#e7e7e7e8;
-  gap:30px;
+  gap:50px;
 }
 .svglua{
   width:20px;
 }
 div > button#contato_butao{
-  width:150px;
-  height:40px;
+  width:160px;
+  height:37px;
   border: none;
   border-radius:20px;
   background:var(--green-1);
@@ -80,13 +80,14 @@ section.inicio > #texto-inicial{
   align-items:center;
   justify-content:center;
   flex-direction:column;
+  width:60%;
 }
 section.inicio > #texto-inicial > h1{
   font-size:6rem;
   margin:20px 0px;
 }
-section.inicio > #texto-inicial > h3{
-  font-size:1rem;
+section.inicio > #texto-inicial > p{
+  font-size:.9rem;
   font-weight:400;
   color:#ffffff71;
   margin-bottom:20px;
@@ -96,10 +97,14 @@ section.inicio > #texto-inicial > h3{
 }
 #acesso > button{
   width:150px;
-  height:40px;
+  height:35px;
   border: none;
   border-radius:20px;
   background:var(--green-1);
   color:white;
   margin-left:20px;
+}
+#acesso > #linkkedln_butao{
+  background: none;
+  border:solid .5px white;
 }
