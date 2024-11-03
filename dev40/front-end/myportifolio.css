@@ -71,15 +71,35 @@ section.inicio{
   align-items:center;
   justify-content:center;
   width:100%;
-  height:100vh;
+  height:70vh;
   font-family:"Raleway",sans-serif;
   color:white;
 }
+section.inicio > #texto-inicial{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
 section.inicio > #texto-inicial > h1{
-  font-size:2rem;
+  font-size:6rem;
+  margin:20px 0px;
 }
 section.inicio > #texto-inicial > h3{
   font-size:1rem;
   font-weight:400;
   color:#ffffff71;
+  margin-bottom:20px;
+}
+#acesso{
+
+}
+#acesso > button{
+  width:150px;
+  height:40px;
+  border: none;
+  border-radius:20px;
+  background:var(--green-1);
+  color:white;
+  margin-left:20px;
 }
