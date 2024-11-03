@@ -77,18 +77,22 @@ section.inicio{
 }
 section.inicio > #texto-inicial{
   display:flex;
-  align-items:center;
+  align-items:left;
   justify-content:center;
   flex-direction:column;
   width:60%;
 }
+section.inicio > #texto-inicial > h3{
+  font-weight:300;
+}
 section.inicio > #texto-inicial > h1{
   font-size:6rem;
-  margin:20px 0px;
+  font-weight:300;
+  margin:8px 0px;
 }
 section.inicio > #texto-inicial > p{
   font-size:.9rem;
-  font-weight:400;
+  font-weight:200;
   color:#ffffff71;
   margin-bottom:20px;
 }
@@ -107,4 +111,7 @@ section.inicio > #texto-inicial > p{
 #acesso > #linkkedln_butao{
   background: none;
   border:solid .5px white;
+}
+#pefil{
+  width:200px;
 }
