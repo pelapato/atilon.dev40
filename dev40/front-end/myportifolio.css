@@ -37,14 +37,13 @@ strong.destaque-cor{
 ul#links{
   display:flex;
   align-items:center;
-  width:400px;
   font-size:.9rem;
   list-style:none;
   color:#e7e7e7e8;
-  gap:20px;
+  gap:30px;
 }
-div{
-
+.svglua{
+  width:20px;
 }
 div > button#contato_butao{
   width:150px;
@@ -53,4 +52,5 @@ div > button#contato_butao{
   border-radius:20px;
   background:var(--green-1);
   color:white;
+  margin-left:20px;
 }
