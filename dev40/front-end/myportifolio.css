@@ -11,12 +11,8 @@
   background:transparent;
 }
 ::-webkit-scrollbar-thumb{
-  width:5px;
   background:rgb(1, 255, 107);
   border-radius:20px;
-}
-::-webkit-scrollbar-track{
-  color:green;
 }
 body{
   width:100%;
@@ -87,12 +83,16 @@ li:hover > .link::after{
 
 
 /*Responsividade em dispositivos celulares*/
-@media(max-width:500px){
+@media(max-width:700px){
   header{
+    position:relative;
     justify-content:space-between;
   }
   #logo{
-    width:200px;
+    position:relative;
+    right:80px;
+    top:-10px;
+    width:360px;
     margin:5px 0px 0px 0px;
   }
   header nav{
@@ -189,4 +189,143 @@ section.flex > .flex > svg{
   position:absolute;
   top:70px;
   left:100px;
+}
+@media(max-width:700px){
+  /*Counteudo da pagina pt-inicio*/
+  section.flex{
+    flex-direction:column;
+  }
+  section.flex > .flex:last-child{
+    width:100%;
+  }
+  section.flex > .flex > article{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    margin:60px 0px 0px 10px;
+  }
+  .destaque-cor{
+    font-weight:400;
+    color:rgb(1,255,107);
+  }
+  section.flex > .flex > article > p{
+    font-size:.9rem;
+    font-weight:400;
+    color:rgba(255, 255, 255, 0.589);
+    margin-bottom:5px;
+  }
+  section.flex > .flex > article > h3{
+    width:94%;
+    font-size:1.1rem;
+  }
+  section.flex > .flex > article > h1{
+    width:95%;
+    font-size:1.9rem;
+    font-weight:500;
+    margin:0px 0px 20px 0px;
+  }
+  .btn_trabalho{
+    width:250px;
+    height:58px;
+    margin:55x 0px 0px 0px;
+  }
+  .btn_trabalho:hover{
+    width:320px;
+  }
+  section.flex > .flex > svg{
+    top:30px;
+  }
+}
+
+/*Mim*/
+#mim > #sobre-mim{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:87%;
+  height:80vh;
+  background:rgba(0, 0, 0, 0.336);
+  box-shadow:0px 0px 3px rgba(255, 255, 255, 0.233);
+  border-radius:10px;
+}
+#mim > #sobre-mim > #dev{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  flex-direction:row;
+}
+#mim > #sobre-mim > div > .foto{
+  display:block;
+  width:50%;
+  height:80vh;
+  border-radius:0px 0px 10px 10px;
+  margin:0px 0px 0px 0px;
+}
+#mim > #sobre-mim > div > .foto::after{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:160px;
+  height:28px;
+  background:white;
+  border:solid 1px rgba(255, 255, 255, 0.288);
+  border-radius:15px;
+  content:"Web Developer";
+  margin:23px 0px 0px 15px;
+  color:black;
+  font-weight:500;
+  font-size:.8rem;
+}
+
+#mim > #sobre-mim > div  .eu{
+  display:block;
+  width:60%;
+  height:80vh;
+  padding:20px 70px;
+}
+#mim > #sobre-mim > div > .eu > h5{
+  font-size:1.2rem;
+  color:rgb(1,255,107);
+  margin:45px 0px 20px 0px;
+  font-weight:400;
+} 
+#mim > #sobre-mim > div > .eu > h1{
+  font-size:1.8rem;
+  margin:9px 0px;
+  font-weight:500;
+}
+#mim > #sobre-mim > div > .eu > p{
+  font-size:1.1rem;
+  font-weight:500;
+}
+#mim > #sobre-mim > div > .eu > p#info{
+  font-size:1.07rem;
+  font-weight:400;
+  color:rgba(255, 255, 255, 0.479);
+  margin-top:40px;
+}
+#mim > #sobre-mim > div > .eu > #rede_externas{
+  display:block;
+  width:90%;
+  height:15vh;
+  margin-top:30px;
+}
+#mim > #sobre-mim > div > .eu > #rede_externas > ul{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+#mim > #sobre-mim > div > .eu > #rede_externas > ul > li{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:70px;
+  height:70px;
+  background:rgb(17, 17, 41);
+  border-radius:6.7px;
+  box-shadow:0px 0px px rgba(255, 255, 255, 0.411);
 }
