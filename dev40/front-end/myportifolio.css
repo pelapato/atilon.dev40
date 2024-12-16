@@ -5,9 +5,6 @@
   margin:0;
   padding:0;
 }
-body,html{
-  scroll-behavior:smooth;
-}
 body{
   width:100%;
   height:100dvh;
@@ -17,11 +14,17 @@ body{
 }
 /*Parte da navega;ao onde contem os links,logo etc...*/
 header{
+  position:fixed;
+  top:0;
+  left:0;
   display:flex;
   align-items:center;
   justify-content:space-between;
   width:100%;
   height:80px;
+  background:rgb(5, 8, 17);
+  overflow: hidden;
+  z-index:1000;
 }
 header nav{
   display:flex;
@@ -33,9 +36,8 @@ header > nav > span#fechar{
 }
 /*logo*/
 #logo{
-  width:110px;
-  margin-left:0px;
-  margin-right:0px;
+  margin-top:10px;
+  width:400px;
 }
 header ul{
   display:flex;
@@ -49,14 +51,26 @@ li{
 }
 a{
   font-family:"Poppins","sans-serif";
-  font-weight:700;
+  font-weight:500;
   text-decoration:none;
-  color:#fff;
-  font-size:.9rem;
+  color:rgba(255, 255, 255, 0.418);
+  font-size:1rem;
+  transition:.6s;
 }
 li:hover a {
   cursor:pointer;
   color:rgb(1, 255, 107);
+}
+li:hover > a::after{
+  display:block;
+  width:100%;
+  height:.5px;
+  content:"";
+  background-image:linear-gradient(to right,
+    transparent,
+    rgb(1,255,107) 40%,
+    rgb(1,255,107)
+  );
 }
 /*butao de Download do curriculo*/
 .btn-curriculo{
@@ -174,36 +188,19 @@ section#inicio > div,section#projetos,section#sobre-mim{
 /*lado direito*/
 section#inicio > div:nth-child(1){
   width:100%;
-  height:90vh;
+  height:100vh;
 }
 section#inicio > div.cena-intro{
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:row;
-  margin-left:20px;
+  margin-left:100px;
 }
 section#inicio > div.cena-intro > article{
   width:100%;
 }
-/*Container dos Svgs Redes-sociais*/
-section#inicio > div.cena-intro  ul#links-sociais{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:30px;
-  margin:0px 30px;
-}
-ul#links-sociais > li > a:hover svg{
-  width:33px;
-  cursor:pointer;
-  transition:.3s;
 
-}
-div#img-front-end > img.Front-end{
-  width:400px;
-}
 /*Paragrafo com efeito de escrever*/
 section#inicio > div.cena-intro  p:nth-child(1){
   animation:escrever 2000ms  steps(20) forwards;
@@ -211,8 +208,8 @@ section#inicio > div.cena-intro  p:nth-child(1){
   display:flex;
   white-space:nowrap;
   align-items:center;
-  font-size:1.1rem;
-  font-weight:400;
+  font-size:1rem;
+  font-weight:300;
   width:0ch;
   height:20px;
   margin:20px 0px;
@@ -230,13 +227,18 @@ section#inicio > div.cena-intro  p:nth-child(1){
   }
 }
 
+section#inicio  div.cena-intro  p:nth-last-child(2){
+  margin-top:30px;
+  font-size:1.2rem;
+  color:rgba(255, 255, 255, 0.699);
+}
 /*-------------*/
 
 /*Efeito de linha da vertical*/
 hr.linha,.line{
   width:80%;
   border:solid .5px rgb(1, 255, 107);
-  margin:20px 0px;
+  margin:5px 0px;
   border-radius:0px 100%;
 }
 .line{
@@ -265,19 +267,32 @@ hr.linha,.line{
 
 /*Redimesionando os texto e destacando cores*/
 section#inicio > div.cena-intro h1{
-  font-size:1.6rem;
+  font-weight:600;
+  margin-bottom:20px;
+  font-size:2rem;
 }
 .efeito-texto{
-  font-size:1.03rem;
   color:rgb(1, 255, 107);
 }
 section#inicio > div.cena-intro  .btn-curriculo{
+  width:250px;
+  height:56px;
+  font-size:1rem;
+  font-weight:400;
   background:.5px rgb(1, 255, 107);
   margin-top:30px;
-  margin-left:20px;
+  border-radius:5px;
+  transition:.8s;
 }
 
-
+section#inicio > div.cena-intro  .btn-curriculo:hover{
+  width:300px;
+}
+#code{
+  position:relative;
+  top:50px;
+  right:-150px;
+}
 /*-----------*/
 
 /*segunda parte sobre minhas HABILIDADES*/
