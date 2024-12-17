@@ -1,3 +1,46 @@
+//CDN - ScrollReveal
+window.animation = ScrollReveal({reset:true});
+
+//texto da ladidng-page
+animation.reveal('.h1',{
+    duration:2000,
+    distance:'-30px',
+})
+animation.reveal('.p',{
+    duration:1800,
+    distance:'-20px',
+    delay:200
+})
+animation.reveal('.redes',{
+    duration:1200,
+    distance:'-40px',
+    delay:200
+})
+/*animation.reveal('.txt_um',{
+    duration:900,
+    distance:'10px',
+    origin:'right',
+    delay:100
+})
+animation.reveal('.txt_dois',{
+    duration:900,
+    distance:'10px',
+    origin:'right',
+    delay:100
+})
+animation.reveal('.txt_tres',{
+    duration:900,
+    distance:'10px',
+    origin:'right',
+    delay:100
+})
+animation.reveal('.txt_quatro',{
+    duration:900,
+    distance:'10px',
+    origin:'riht',
+    delay:100
+})*/
+
 //main - ladding-page
 const escrever = document.querySelector(".escrever");
 const technologias = ["Web Designer","Game","Dev"]

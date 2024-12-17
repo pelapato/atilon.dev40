@@ -781,3 +781,8 @@ footer > strong > img{
     
   }
 }
+
+/*Animando com CDN - ScrollReveal*/
+.txt-animation{
+  visibility:hidden;
+}
