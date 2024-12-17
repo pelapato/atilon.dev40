@@ -28,6 +28,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  width:100%;
   height:80px;
   z-index:1;
 }
@@ -35,6 +36,7 @@ header nav{
   display:flex;
   align-items:center;
   justify-content:start;
+  margin-right:80px;
 }
 .menu_ativo{
   position:fixed;
