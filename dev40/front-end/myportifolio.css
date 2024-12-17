@@ -562,6 +562,8 @@ section.flex > .flex > svg{
 /*servicos prestados ao cliente ou contratante*/
 #servicos{
   flex-direction:column;
+  
+  background:rgb(9,9,17);
 }
 #servicos > h1{
   font-size:2rem;
@@ -640,5 +642,104 @@ section.flex > .flex > svg{
     color:rgba(255, 255, 255, 0.534);
     font-weight:400;
     font-size:1.08rem;
+  }
+}
+
+/*Conhecimentos / habilidades*/
+#conhecimentos > div{
+  width:100%;
+  height:100vh;
+  padding:10px;
+}
+#conhecimentos > #area_de_habilidades > h3{
+  font-size:1.6rem;
+  font-weight:600;
+  margin:0px 0px 20px 0px;
+}
+
+#conhecimentos > #area_de_habilidades > p{
+  color:rgba(255, 255, 255, 0.562);
+}
+#conhecimentos > #area_de_habilidades{
+  padding:0px 80px;
+}
+#conhecimentos > #linguaguems{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+#conhecimentos > #linguaguems > div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:126px;
+  height:126px;
+  background:rgba(0, 0, 0, 0.336);
+  border-radius:4.4px;
+  border:solid .1px rgba(255, 255, 255, 0.116);
+  padding:10px;
+  transition:.4s;
+}
+#conhecimentos > #linguaguems > div:hover{
+  border-color:rgb(1,255,107);
+}
+
+
+@media(max-width:700px){
+  /*Conhecimentos / habilidades*/
+  #conhecimentos{
+    height:150vh;
+  }
+  #conhecimentos > #area_de_habilidades{
+    height:20vh;
+    padding:0px 0px 0px 40px;
+  }
+  #conhecimentos > #linguaguems{
+    justify-content:center;
+    align-items:center;
+    padding:0px 20px;
+  }
+  #conhecimentos > #linguaguems > div{
+    width:105px;
+    height:105px;
+  }
+}
+
+/*rodape do nosso site*/
+footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  width:100%;
+  height:70px;
+  background:rgb(9, 9, 17);
+  color:white;
+  margin:45px 0px 0px 0px;
+}
+footer > h4{
+  font-size:.9rem;
+  font-weight:500;
+}
+footer > strong{
+  font-weight:500;
+}
+footer > strong > img{
+  
+}
+@media(max-width:700px){
+  footer{
+    height:60px;
+  }
+  footer > h4{
+    font-size:.7rem;
+  }
+  footer > strong{
+    font-size:.6rem;
+    font-weight:500;
+  }
+  footer > strong > img{
+    
   }
 }
