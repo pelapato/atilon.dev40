@@ -1,9 +1,16 @@
+//main - ladding-page
 const escrever = document.querySelector(".escrever");
 const technologias = ["Web Designer","Game","Dev"]
 console.log(escrever);
+
+//header - menu
 const menu = document.querySelector("#menu");
 const menu_linha = document.querySelector("#linha");
 const nav = document.querySelector("nav");
+
+//conhecimento
+const linguaguem = [...document.querySelectorAll("#linguaguems > div")];
+const texto_linguaguem = document.querySelector("#texto_linguaguem");
 
 var sistema_de_menu_verify = 1;
 
@@ -21,3 +28,19 @@ const sistema_de_menu=()=>{
     })
 }
 sistema_de_menu()
+
+//efeito de hover nas habilidades
+const efeito_de_mouse=()=>{
+    const info = ["html","css","nodejs","boostrap","python","java script","mysql","unity","csharp","figma"]
+
+    linguaguem.map((e,ind,vetor)=>{
+        e.addEventListener('mousemove',(evt)=>{
+            //O elemento que houve o mousemove, traz uma informacao
+            texto_linguaguem.innerHTML = info[ind];
+        })
+        e.addEventListener('mouseleave',()=>{
+            texto_linguaguem.innerHTML = "Passe o mouser na linguaguem ou toque nela e veja a informacao*";
+        })
+    })
+}
+efeito_de_mouse();

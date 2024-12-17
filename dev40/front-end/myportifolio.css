@@ -30,14 +30,13 @@ header{
   align-items:center;
   justify-content:space-between;
   width:100%;
-  height:100px;
-  background:rgb(5, 8, 17);
+  height:80px;
   z-index:1;
 }
 header nav{
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:start;
   margin-right:80px;
 }
 .menu_ativo{
@@ -53,9 +52,12 @@ header nav{
   z-index:-1;
 }
 /*logo*/
-#logo{
+#logo_header,#logo_nav{
   margin:10px 30px 0px 0px;
   width:430px;
+}
+#logo_header{
+  display:none;
 }
 #menu{
   position:absolute;
@@ -137,24 +139,56 @@ li:hover > .link::after{
     rgb(1,255,107)
   );
 }
+#links_externos{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-right:30px;
+}
+#links_externos > #redes{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+}
+#links_externos #btn_tema{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:30px;
+  background:none;
+  border:solid transparent 1px;
+  border-left-color:rgba(255, 255, 255, 0.534);
+}
+#links_externos #btn_tema > img.ceta{
+  margin-left:4px;
+}
 /*------------*/
 
 
 /*Responsividade em dispositivos celulares*/
-@media(max-width:700px){
+@media(max-width:1200px){
   header{
     position:relative;
     justify-content:space-between;
+    flex-direction:row-reverse;
   }
   #menu{
     display:block;
   }
-  #logo{
+  #logo_nav,#logo_header{
     position:relative;
-    right:80px;
-    top:-10px;
-    width:360px;
+    right:25%;
+    width:200px;
     margin:5px 0px 0px 0px;
+  }
+  #logo_header{
+    display:block;
+  }
+  #logo_nav{
+    display:none;
   }
   header nav{
     display:none;
@@ -169,6 +203,9 @@ li:hover > .link::after{
   }
   header > a{
     font-size:1.2rem;
+  }
+  #links_externos{
+    margin:0px 0px 0px 20px;
   }
 }
 
@@ -257,7 +294,7 @@ section.flex > .flex > svg{
   top:70px;
   left:100px;
 }
-@media(max-width:700px){
+@media(max-width:1200px){
   /*Counteudo da pagina pt-inicio*/
   section.flex{
     flex-direction:column;
@@ -403,7 +440,7 @@ section.flex > .flex > svg{
   cursor:pointer;
 }
 
-@media(max-width:700px){
+@media(max-width:1200px){
   #mim > #sobre-mim{
     height:160vh;
   }
@@ -535,7 +572,7 @@ section.flex > .flex > svg{
   color:transparent;
 }
 
-@media(max-width:700px){
+@media(max-width:1200px){
   /*Projetos*/
   #projetos{
     height:220vh;
@@ -604,7 +641,7 @@ section.flex > .flex > svg{
   font-size:1.08rem;
 }
 
-@media(max-width:700px){
+@media(max-width:1200px){
   /*servicos prestados ao cliente ou contratante*/
   #servicos{
     height:160vh;
@@ -654,11 +691,12 @@ section.flex > .flex > svg{
 #conhecimentos > #area_de_habilidades > h3{
   font-size:1.6rem;
   font-weight:600;
-  margin:0px 0px 20px 0px;
+  margin:0px 0px 20px 20px;
 }
 
 #conhecimentos > #area_de_habilidades > p{
   color:rgba(255, 255, 255, 0.562);
+  margin:0px 0px 0px 20px;
 }
 #conhecimentos > #area_de_habilidades{
   padding:0px 80px;
@@ -687,7 +725,7 @@ section.flex > .flex > svg{
 }
 
 
-@media(max-width:700px){
+@media(max-width:1200px){
   /*Conhecimentos / habilidades*/
   #conhecimentos{
     height:150vh;
@@ -695,6 +733,7 @@ section.flex > .flex > svg{
   #conhecimentos > #area_de_habilidades{
     height:20vh;
     padding:0px 0px 0px 0px;
+    margin-bottom:20px;
   }
   #conhecimentos > #linguaguems{
     justify-content:center;
@@ -727,7 +766,7 @@ footer > strong{
 footer > strong > img{
   
 }
-@media(max-width:700px){
+@media(max-width:1200px){
   footer{
     height:60px;
   }
