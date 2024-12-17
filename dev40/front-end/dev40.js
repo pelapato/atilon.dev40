@@ -59,9 +59,10 @@ const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 //Elementos do site para a mudanca de tema
 //p,a,button,h1,h2,h3,h4,h5
 const titulos =[...document.querySelectorAll("h1,h2,h3,h5")];
-const p = document.querySelectorAll("p");
+const p = [...document.querySelectorAll("p")];
 const a = document.querySelectorAll("a");
 const button = document.querySelectorAll("button");
+const sobre_mim = document.querySelector("#sobre-mim")
 console.log(titulos)
 
 var verificador = 1;
@@ -83,6 +84,10 @@ const sistema_de_tema=()=>{
                 titulos.map((e)=>{
                     e.classList.add("titulo");
                 })
+                p.map((e)=>{
+                    e.classList.add("paragrafo")
+                })
+                sobre_mim.classList.add("ligth_sobre_mim")
             }
             else if(e.id == "dark"){
                 body.style.background=cor[1];   
