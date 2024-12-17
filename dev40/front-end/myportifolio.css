@@ -185,9 +185,6 @@ li:hover > .link::after{
 .secao_tema{
   display:flex !important;
 }
-.tema_ativo{
-  background:rgb(1,255,107) !important;
-}
 #sistema-de-tema > ul button{
   display:flex;
   justify-content:space-around;
@@ -202,7 +199,7 @@ li:hover > .link::after{
   transition:.4s;
 }
 #sistema-de-tema > ul button:hover{
-  background:rgba(1, 255, 107, 0.308);
+  background:rgba(1, 255, 107);
   color:black;
   cursor:pointer;
 }

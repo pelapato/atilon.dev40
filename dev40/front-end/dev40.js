@@ -54,16 +54,13 @@ const nav = document.querySelector("nav");
 //header - menu - tema
 const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
-const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
+
+
+var verificador = 1;
 
 const sistema_de_tema=()=>{
     btn_tema.addEventListener('click',()=>{
         secao_tema.classList.toggle("secao_tema");
-    })
-    btn_sub_tema.map((e,ind,vetor)=>{
-        e.addEventListener('click',()=>{
-            e.classList.add("tema_ativo");
-        })
     })
     secao_tema.addEventListener('mouseleave',()=>{
         secao_tema.classList.remove("secao_tema");
