@@ -476,6 +476,7 @@ section.flex > .flex > svg{
   border-radius:.5px;
   border:solid 1.3px white;
   padding:20px;
+  transition:.4s;
 }
 #projetos > #todos_os_projetos > div.projeto > h4{
   font-size:1.2rem;
@@ -499,7 +500,7 @@ section.flex > .flex > svg{
   font-weight:500;
   background:none;
   border:none;
-  transition:.4s;
+  transition:.6s;
 }
 
 #projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto:hover{
