@@ -828,3 +828,14 @@ footer > strong > img{
 .txt-animation{
   visibility:hidden;
 }
+
+/*Tema do portifolio css*/
+.titulo{
+  color:black !important;
+}
+.paragrafo{
+  color:rgba(0, 0, 0, 0.589);
+}
+.a{
+  color:rgb(9,9,17);
+}

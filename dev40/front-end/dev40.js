@@ -54,9 +54,18 @@ const nav = document.querySelector("nav");
 //header - menu - tema
 const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
+const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
+//Elementos do site para a mudanca de tema
+//p,a,button,h1,h2,h3,h4,h5
+const titulos =[...document.querySelectorAll("h1,h2,h3,h5")];
+const p = document.querySelectorAll("p");
+const a = document.querySelectorAll("a");
+const button = document.querySelectorAll("button");
+console.log(titulos)
 
 var verificador = 1;
+const cor = ["white","rgb(5, 8, 17)"];
 
 const sistema_de_tema=()=>{
     btn_tema.addEventListener('click',()=>{
@@ -64,6 +73,26 @@ const sistema_de_tema=()=>{
     })
     secao_tema.addEventListener('mouseleave',()=>{
         secao_tema.classList.remove("secao_tema");
+    })
+    //responsavel pea mudanca de tema
+    const body = document.querySelector("body");
+    btn_sub_tema.map((e,ind,vetor)=>{
+        e.addEventListener('click',()=>{
+            if(e.id == "ligth"){
+                body.style.background=cor[0];
+                titulos.map((e)=>{
+                    e.classList.add("titulo");
+                })
+            }
+            else if(e.id == "dark"){
+                body.style.background=cor[1];   
+                titulos.map((e)=>{
+                    e.classList.remove("titulo");
+                })             
+            }else{
+                console.log("botao 3 - tema padrao")
+            }
+        })
     })
 }
 sistema_de_tema();
@@ -89,7 +118,6 @@ const sistema_de_menu=()=>{
     })
 }
 sistema_de_menu()
-
 //efeito de hover nas habilidades
 const efeito_de_mouse=()=>{
     const info = ["html","css","nodejs","boostrap","python","java script","mysql","unity","csharp","figma"]
