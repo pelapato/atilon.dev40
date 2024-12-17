@@ -455,7 +455,7 @@ section.flex > .flex > svg{
   font-weight:600;
   margin:20px 0px 40px 0px;
 }
-#projetos > h3{
+#projetos  h3{
   font-size:1.1rem;
   color:rgb(1,255,107);
   font-weight:500;
@@ -474,6 +474,7 @@ section.flex > .flex > svg{
   height:180px;
   background:rgba(0, 0, 0, 0.336);
   border-radius:.5px;
+  border:solid 1.3px white;
   padding:20px;
 }
 #projetos > #todos_os_projetos > div.projeto > h4{
@@ -487,7 +488,7 @@ section.flex > .flex > svg{
   color:rgba(255, 255, 255, 0.589);
   margin:10px 0px 20px 0px;
 }
-#projetos > #todos_os_projetos > div.projeto > button.btn_acessar_projeto{
+#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto{
   display:flex;
   align-items:center;
   text-align:start;
@@ -496,9 +497,41 @@ section.flex > .flex > svg{
   height:40px;
   font-size:1.2rem;
   font-weight:400;
-  color:white;
   background:none;
   border:none;
+  transition:.4s;
+}
+
+#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto:hover{
+  cursor:pointer;
+}
+#projetos > #todos_os_projetos > div.um{
+  border-color:rgb(163, 8, 8);
+}
+#projetos > #todos_os_projetos > div.dois{
+  border-color:rgb(10, 10, 146);
+}
+#projetos > #todos_os_projetos > div.tres{
+  border-color:rgb(95, 6, 179);
+}
+#projetos > #todos_os_projetos > div.quatro{
+  border-color:transparent;
+}
+#projetos > #todos_os_projetos > div.quatro:hover{
+  border-color:rgb(1,255,107);
+}
+
+#projetos > #todos_os_projetos > div.um  button{
+  color:rgb(163, 8, 8) ;
+}
+#projetos > #todos_os_projetos > div.dois  button{
+  color:rgb(10, 10, 146);
+}
+#projetos > #todos_os_projetos > div.tres button{
+  color:rgb(95, 6, 179);
+}
+#projetos > #todos_os_projetos > div.quatro  button{
+  color:transparent;
 }
 
 @media(max-width:700px){
@@ -509,7 +542,7 @@ section.flex > .flex > svg{
   #projetos > h1{
     margin:20px 0px 40px 0px;
   }
-  #projetos > h3{
+  #projetos  h3{
     font-size:1.2rem;
   }
   #projetos > #todos_os_projetos{
@@ -519,5 +552,8 @@ section.flex > .flex > svg{
   #projetos > #todos_os_projetos > div.projeto{
     width:80%;
     height:200px;
+  }
+  #projetos > #todos_os_projetos > div.projeto button{
+    font-size:1.6rem;
   }
 }
