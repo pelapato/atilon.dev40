@@ -58,11 +58,15 @@ const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
 const sistema_de_tema=()=>{
     btn_tema.addEventListener('click',()=>{
-        secao_tema.classList.toggle("secao_tema")
+        secao_tema.classList.toggle("secao_tema");
     })
-
+    btn_sub_tema.map((e,ind,vetor)=>{
+        e.addEventListener('click',()=>{
+            e.classList.add("tema_ativo");
+        })
+    })
     secao_tema.addEventListener('mouseleave',()=>{
-        
+        secao_tema.classList.remove("secao_tema");
     })
 }
 sistema_de_tema();

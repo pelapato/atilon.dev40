@@ -184,6 +184,9 @@ li:hover > .link::after{
 .secao_tema{
   display:flex !important;
 }
+.tema_ativo{
+  background:rgb(1,255,107) !important;
+}
 #sistema-de-tema > ul button{
   display:flex;
   justify-content:space-around;
@@ -200,6 +203,7 @@ li:hover > .link::after{
 #sistema-de-tema > ul button:hover{
   background:rgba(1, 255, 107, 0.308);
   color:black;
+  cursor:pointer;
 }
 /*------------*/
 
@@ -285,7 +289,7 @@ section.flex > .flex:last-child::after{
   filter:blur(10px);
 }
 section.flex > .flex > article{
-  margin:40px 0px 0px 100px;
+  margin:0px 0px 0px 100px;
 }
 .destaque-cor{
   font-weight:400;
