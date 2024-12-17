@@ -180,7 +180,7 @@ li:hover > .link::after{
   }
   #logo_nav,#logo_header{
     position:relative;
-    right:25%;
+    right: 15%;;
     width:200px;
     margin:5px 0px 0px 0px;
   }
