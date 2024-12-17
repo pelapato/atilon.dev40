@@ -57,7 +57,7 @@ header nav{
 }
 #menu{
   position:absolute;
-  display:flex;
+  display:none;
   bottom:30px;
   right:0;
   width:40px;
@@ -141,8 +141,11 @@ li:hover > .link::after{
 /*Responsividade em dispositivos celulares*/
 @media(max-width:700px){
   header{
-    position:fixed;
+    position:relative;
     justify-content:space-between;
+  }
+  #menu{
+    display:block;
   }
   #logo{
     position:relative;
