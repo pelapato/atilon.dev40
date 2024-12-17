@@ -51,6 +51,23 @@ const menu = document.querySelector("#menu");
 const menu_linha = document.querySelector("#linha");
 const nav = document.querySelector("nav");
 
+//header - menu - tema
+const btn_tema = document.querySelector("#btn_tema");
+const secao_tema = document.querySelector("#sistema-de-tema > ul");
+const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
+
+const sistema_de_tema=()=>{
+    btn_tema.addEventListener('click',()=>{
+        secao_tema.classList.toggle("secao_tema")
+    })
+
+    secao_tema.addEventListener('mouseleave',()=>{
+        
+    })
+}
+sistema_de_tema();
+
+
 //conhecimento
 const linguaguem = [...document.querySelectorAll("#linguaguems > div")];
 const texto_linguaguem = document.querySelector("#texto_linguaguem");

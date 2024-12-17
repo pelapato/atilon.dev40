@@ -165,6 +165,42 @@ li:hover > .link::after{
 #links_externos #btn_tema > img.ceta{
   margin-left:4px;
 }
+#sistema-de-tema > ul{
+  position:absolute;
+  right:20px;
+  top:60px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  width:120px;
+  height:100px;
+  background:rgba(2, 1, 19, 0.363);
+  border-radius:6.5px;
+  box-shadow:0px 0px 3px rgba(73, 72, 72, 0.589);
+  gap:0;
+}
+/*classe java script secao tema*/
+.secao_tema{
+  display:flex !important;
+}
+#sistema-de-tema > ul button{
+  display:flex;
+  justify-content:space-around;
+  width:105px;
+  border-radius:5px;
+  font-weight:500;
+  color:white;
+  font-size:15px;
+  padding:6px 3px;
+  border:none;
+  background:none;
+  transition:.4s;
+}
+#sistema-de-tema > ul button:hover{
+  background:rgba(1, 255, 107, 0.308);
+  color:black;
+}
 /*------------*/
 
 
@@ -206,6 +242,9 @@ li:hover > .link::after{
   }
   #links_externos{
     margin:0px 0px 0px 20px;
+  }
+  #sistema-de-tema > ul{
+    right:65%;
   }
 }
 
