@@ -58,12 +58,13 @@ const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
 //Elementos do site para a mudanca de tema
 //p,a,button,h1,h2,h3,h4,h5
-const titulos =[...document.querySelectorAll("h1,h2,h3,h5")];
-const p = [...document.querySelectorAll("p")];
-const a = document.querySelectorAll("a");
-const button = document.querySelectorAll("button");
+const titulos =[...document.querySelectorAll("#inicio h1,#mim h1")];
+const p = [...document.querySelectorAll("#inicio  h3,#inicio p,#mim p")];
+const a = [...document.querySelectorAll("a")];
 const sobre_mim = document.querySelector("#sobre-mim")
-console.log(titulos)
+const header = document.querySelector("header");
+
+const area_ligth = [...document.querySelectorAll("#inicio,#mim")];
 
 var verificador = 1;
 const cor = ["white","rgb(5, 8, 17)"];
@@ -76,24 +77,37 @@ const sistema_de_tema=()=>{
         secao_tema.classList.remove("secao_tema");
     })
     //responsavel pea mudanca de tema
-    const body = document.querySelector("body");
     btn_sub_tema.map((e,ind,vetor)=>{
         e.addEventListener('click',()=>{
             if(e.id == "ligth"){
-                body.style.background=cor[0];
+                area_ligth.map((e)=>{
+                    e.style.background=cor[0];
+                })
+                header.classList.add('header')
                 titulos.map((e)=>{
                     e.classList.add("titulo");
                 })
                 p.map((e)=>{
                     e.classList.add("paragrafo")
                 })
+                a.map((e)=>{
+                    e.classList.add("a")
+                })
                 sobre_mim.classList.add("ligth_sobre_mim")
             }
             else if(e.id == "dark"){
-                body.style.background=cor[1];   
+                body.style.background=cor[1];
+                header.classList.remove('header')  
                 titulos.map((e)=>{
                     e.classList.remove("titulo");
-                })             
+                })
+                p.map((e)=>{
+                    e.classList.remove("paragrafo")
+                })
+                a.map((e)=>{
+                    e.classList.remove("a")
+                })
+                sobre_mim.classList.remove("ligth_sobre_mim")             
             }else{
                 console.log("botao 3 - tema padrao")
             }
