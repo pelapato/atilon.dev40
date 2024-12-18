@@ -56,13 +56,14 @@ const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
 const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
+var verificador = 1;
+
 const sistema_de_tema=()=>{
     btn_tema.addEventListener('click',()=>{
-        secao_tema.classList.toggle("secao_tema")
+        secao_tema.classList.toggle("secao_tema");
     })
-
     secao_tema.addEventListener('mouseleave',()=>{
-        
+        secao_tema.classList.remove("secao_tema");
     })
 }
 sistema_de_tema();
@@ -88,7 +89,6 @@ const sistema_de_menu=()=>{
     })
 }
 sistema_de_menu()
-
 //efeito de hover nas habilidades
 const efeito_de_mouse=()=>{
     const info = ["html","css","nodejs","boostrap","python","java script","mysql","unity","csharp","figma"]
