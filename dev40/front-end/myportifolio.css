@@ -22,12 +22,13 @@ body{
 }
 /*Parte da navega;ao onde contem os links,logo etc...*/
 header{
-  position:relative;
+  position:fixed;
   top:0;
   left:0;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  background:rgb(5, 8, 17);
   width:100%;
   height:80px;
   z-index:1;
@@ -54,9 +55,6 @@ header nav{
 #logo_header,#logo_nav{
   margin:10px 30px 0px 0px;
   width:430px;
-}
-#logo_header{
-  display:none;
 }
 #menu{
   position:absolute;
@@ -208,8 +206,7 @@ li:hover > .link::after{
 /*Responsividade em dispositivos celulares*/
 @media(max-width:1200px){
   header{
-    position:relative;
-    justify-content:space-between;
+    justify-content:space-around;
     flex-direction:row-reverse;
   }
   #menu{
@@ -238,7 +235,7 @@ li:hover > .link::after{
     background:rgb(17, 17, 41);
     cursor:pointer;
   }
-  header > a{
+  header > nav > ul > li > a{
     font-size:1.2rem;
   }
   #links_externos{
@@ -253,60 +250,58 @@ li:hover > .link::after{
 /*Counteudo da pagina pt-inicio*/
 #inicio,
 .flex{
-  width:100%;
-  height:100vh;  
-}
-section.flex{
   display:flex;
   align-items:center;
   justify-content:center;
+  width:100%; 
+  height:100%;
 }
-section.flex > .flex{
+section.flex > div{
   display:block;
 }
-section.flex > .flex:nth-child(1){
+section.flex > div:nth-child(1){
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
 }
-section.flex > .flex:last-child{
+section.flex > div:last-child{
   position:relative;
-  width:60%;
+  width:35%;
+  height:100%;
   overflow:hidden;
 }
-section.flex > .flex:last-child::after{
+section.flex > div:last-child::after{
   display:block;
   content:"";
   width:100%;
-  height:100vh;
   background-image:linear-gradient(to left,
   rgba(0, 0, 0, 0.336) 40%,
   transparent,
   transparent);
   filter:blur(10px);
 }
-section.flex > .flex > article{
-  margin:0px 0px 0px 100px;
+section.flex > div > article{
+  margin:100px 0px 0px 100px;
 }
 .destaque-cor{
   font-weight:400;
   color:rgb(1,255,107);
 }
-section.flex > .flex > article > p{
+section.flex > div > article > p{
   font-size:1rem;
   font-weight:400;
   color:rgba(255, 255, 255, 0.589);
   margin-bottom:5px;
 }
 
-section.flex > .flex > article > h3{
+section.flex > div > article > h3{
   font-size:1.2rem;
   font-weight:400;
   color:rgba(255, 255, 255, 0.589);
   margin-top:35px;
 }
-section.flex > .flex > article > h1{
+section.flex > div > article > h1{
   color:white;
   position:relative;
   font-size:2.5rem;
@@ -331,44 +326,44 @@ section.flex > .flex > article > h1{
   width:360px;
   cursor:pointer;
 }
-section.flex > .flex > svg{
+section.flex > div > svg{
   position:absolute;
   top:70px;
   left:100px;
 }
 @media(max-width:1200px){
   /*Counteudo da pagina pt-inicio*/
-  section.flex{
+  #inicio{
     flex-direction:column;
+    margin-top:100px;
   }
-  section.flex > .flex:last-child{
+  section.flex > div:last-child{
     display:none;
-    width:100%;
   }
-  section.flex > .flex > article{
+  section.flex > div > article{
     display:flex;
     align-items:center;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     text-align:center;
-    margin:60px 0px 0px 10px;
+    margin:40px 0px 0px 10px;
   }
   .destaque-cor{
     font-weight:400;
     color:rgb(1,255,107);
   }
-  section.flex > .flex > article > p{
+  section.flex > div > article > p{
     font-size:.9rem;
     font-weight:400;
     color:rgba(255, 255, 255, 0.589);
     margin-bottom:5px;
   }
-  section.flex > .flex > article > h3{
-    width:94%;
+  section.flex > div > article > h3{
+    width:90%;
     font-size:1.1rem;
   }
-  section.flex > .flex > article > h1{
+  section.flex > div > article > h1{
     width:95%;
     font-size:1.9rem;
     font-weight:500;
@@ -377,26 +372,24 @@ section.flex > .flex > svg{
   .btn_trabalho{
     width:250px;
     height:58px;
-    margin:55x 0px 0px 0px;
+    margin:55px 0px 0px 0px;
   }
   .btn_trabalho:hover{
     width:320px;
   }
-  section.flex > .flex > svg{
+  section.flex > div > svg{
     top:30px;
   }
 }
 
 /*Mim*/
-#mim{
-  height:100vh;
-}
 #mim > #sobre-mim{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
   width:87%;
-  height:80vh;
+  height:80%;
   background:rgba(0, 0, 0, 0.336);
   box-shadow:0px 0px 3px rgba(255, 255, 255, 0.233);
   border-radius:10px;
@@ -404,14 +397,17 @@ section.flex > .flex > svg{
 #mim > #sobre-mim > #dev{
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:start;
   width:100%;
+  height:100%;
   flex-direction:row;
 }
 #mim > #sobre-mim > div > .foto{
-  display:block;
+  display:flex;
+  align-items:center;
+  flex-direction:start;
   width:50%;
-  height:80vh;
+  width:100%;
   border-radius:0px 0px 10px 10px;
   margin:0px 0px 0px 0px;
 }
@@ -434,8 +430,8 @@ section.flex > .flex > svg{
 #mim > #sobre-mim > div  .eu{
   display:block;
   width:60%;
-  height:80vh;
-  padding:20px 70px;
+  height:100%;
+  padding:0px 40px;
   color:#fff;
 }
 #mim > #sobre-mim > div > .eu > h5{
@@ -458,16 +454,16 @@ section.flex > .flex > svg{
   font-size:1.07rem;
   font-weight:400;
   color:rgba(255, 255, 255, 0.479);
-  margin-top:40px;
+  margin-top:43px;
 }
 #mim > #sobre-mim > div > .eu > #rede_externas{
-  display:block;
-  width:100%;
-  margin-top:40px;
+  justify-content:start;
+  height:20vh;
 }
 #mim > #sobre-mim > div > .eu > #rede_externas > ul{
   display:flex;
   align-items:center;
+  justify-content:start;
   flex-wrap:wrap;
   gap:20px;
 }
@@ -489,26 +485,31 @@ section.flex > .flex > svg{
 }
 
 @media(max-width:1200px){
+  #mim{
+    height:120%;
+  }
   #mim > #sobre-mim{
-    height:160vh;
+    padding:0px 0px 10px 0px;
   }
   #mim > #sobre-mim > #dev{
     flex-direction:column;
-    height:100%;
+    height:101%;
+    width:80%;
+    padding:25px 0px 25px 0px;
   }
-  #mim > #sobre-mim > div > .foto{
-    height:100%;
-    width:100%;
-  }  
+  .foto{
+    height:0px;
+  }
   #mim > #sobre-mim > div  .eu{
     display:block;
-    width:80%;
+    width:100%;
     height:100%;
+    padding:0;
     text-align:start;
   }
   #mim > #sobre-mim > div > .eu > h5{
     font-size:1.1rem;
-    margin:10px 0px 20px 0px;
+    margin:20px 0px 20px 0px;
   } 
   #mim > #sobre-mim > div > .eu > h1{
     font-size:1.7rem;
@@ -522,8 +523,8 @@ section.flex > .flex > svg{
     margin-top:30px;
   }
   #mim > #sobre-mim > div > .eu > #rede_externas > ul{
-    gap:10px;
     margin-top:50px;
+    gap:10px;
   }
   #mim > #sobre-mim > div > .eu > #rede_externas > ul > li {
     width:58px;
@@ -533,31 +534,34 @@ section.flex > .flex > svg{
 
 /*Projetos*/
 #projetos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
   flex-direction:column;
   padding:50px 0px 0px 0px;
 }
 #projetos > h1{
   font-size:2rem;
   font-weight:600;
-  margin:0px 0px 40px 0px;
+  margin:40px 0px;
 }
 #projetos  h3{
   font-size:1.1rem;
   color:rgb(1,255,107);
   font-weight:500;
-  margin:40px 0px 100px 0px;
+  margin:40px 0px 90px 0px;
 }
 #projetos > #todos_os_projetos{
   display:flex;
   align-items:center;
+  justify-content:center;
   flex-wrap:wrap;
-  width:90%;
   gap:20px;
 }
 #projetos > #todos_os_projetos > div.projeto{
   display:block;
-  width:340px;
-  height:180px;
+  width:325px;
+  height:165px;
   background:rgba(0, 0, 0, 0.336);
   border-radius:.5px;
   border:solid 1.3px white;
@@ -565,15 +569,15 @@ section.flex > .flex > svg{
   transition:.4s;
 }
 #projetos > #todos_os_projetos > div.projeto > h4{
-  font-size:1.2rem;
+  font-size:1.1rem;
   font-weight:600;
   margin:10px 0px 20px 0px;
 }
 #projetos > #todos_os_projetos > div.projeto > p{
-  font-size:1.08rem;
+  font-size:1rem;
   font-weight:400;
   color:rgba(255, 255, 255, 0.589);
-  margin:10px 0px 20px 0px;
+  margin:20px 0px 20px 0px;
 }
 #projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto{
   display:flex;
@@ -582,7 +586,7 @@ section.flex > .flex > svg{
   justify-content:start;
   width:170px;
   height:40px;
-  font-size:1.3rem;
+  font-size:1.2rem;
   font-weight:500;
   background:none;
   border:none;
@@ -591,13 +595,6 @@ section.flex > .flex > svg{
 
 #projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto:hover{
   cursor:pointer;
-}
-#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto::after{
-  display:block;
-  border-right:solid white 2px;
-  content:"";
-  width:100%;
-  height:2px;
 }
 #projetos > #todos_os_projetos > div.um{
   border-color:rgb(163, 8, 8);
@@ -629,12 +626,8 @@ section.flex > .flex > svg{
 }
 
 @media(max-width:1200px){
-  /*Projetos*/
-  #projetos{
-    height:220vh;
-  }
   #projetos > h1{
-    margin:20px 0px 40px 0px;
+    margin:0px 0px 40px 0px;
   }
   #projetos  h3{
     font-size:1.2rem;
@@ -644,19 +637,18 @@ section.flex > .flex > svg{
     width:100%;
   }
   #projetos > #todos_os_projetos > div.projeto{
-    width:80%;
-    height:200px;
+    width:76%;
   }
   #projetos > #todos_os_projetos > div.projeto button{
-    font-size:1.6rem;
+    font-size:1.3rem;
   }
 }
 
 /*servicos prestados ao cliente ou contratante*/
 #servicos{
   flex-direction:column;
-  
   background:rgb(9,9,17);
+  height:100%;
 }
 #servicos > h1{
   font-size:2rem;
@@ -666,12 +658,14 @@ section.flex > .flex > svg{
 #servicos > #contrate{
   display:flex;
   align-items:center;
+  justify-content:center;
   flex-wrap: wrap;
+  width:100%;
   gap:20px;
 }
 #servicos > #contrate > .servicos{
   display:block;
-  width:310px;
+  width:340px;
   height:250px;
   background:rgba(0, 0, 0, 0.336);
   border-radius:3px;
@@ -699,20 +693,13 @@ section.flex > .flex > svg{
 
 @media(max-width:1200px){
   /*servicos prestados ao cliente ou contratante*/
-  #servicos{
-    height:160vh;
-  }
   #servicos > #contrate{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap: wrap;
     gap:20px;
   }
   #servicos > #contrate > .servicos{
     display:block;
-    width:310px;
-    height:250px;
+    width:350px;
+    height:220px;
     background:rgba(0, 0, 0, 0.336);
     border-radius:3px;
     border:solid .1px rgba(255, 255, 255, 0.151);
@@ -729,19 +716,23 @@ section.flex > .flex > svg{
   #servicos > #contrate > .servicos > h4{
     font-size:1.6rem;
     font-weight:600;
-    margin:0px 0px 30px 0px;
+    margin:0px 0px 10px 0px;
   }
   #servicos > #contrate > .servicos > p{
     color:rgba(255, 255, 255, 0.534);
     font-weight:400;
-    font-size:1.08rem;
+    font-size:1rem;
   }
 }
 
 /*Conhecimentos / habilidades*/
+#conheciemntos{
+  width:100%;
+  height:100%;
+}
 #conhecimentos > div{
   width:100%;
-  height:100vh;
+  height:100%;
   padding: 0px 0px 0px 10px;
 }
 #conhecimentos > #area_de_habilidades > h3{
@@ -784,7 +775,7 @@ section.flex > .flex > svg{
 @media(max-width:1200px){
   /*Conhecimentos / habilidades*/
   #conhecimentos{
-    height:150vh;
+    flex-direction:column;
   }
   #conhecimentos > #area_de_habilidades{
     height:20vh;
