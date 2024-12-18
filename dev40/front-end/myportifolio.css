@@ -56,7 +56,7 @@ header nav{
   width:430px;
 }
 #logo_header{
-  display:none;
+  display:block;
 }
 #menu{
   position:absolute;
@@ -238,7 +238,7 @@ li:hover > .link::after{
     background:rgb(17, 17, 41);
     cursor:pointer;
   }
-  header > a{
+  header > nav > ul > li > a{
     font-size:1.2rem;
   }
   #links_externos{
@@ -557,7 +557,7 @@ section.flex > .flex > svg{
 #projetos > #todos_os_projetos > div.projeto{
   display:block;
   width:340px;
-  height:180px;
+  height:170px;
   background:rgba(0, 0, 0, 0.336);
   border-radius:.5px;
   border:solid 1.3px white;
@@ -587,17 +587,6 @@ section.flex > .flex > svg{
   background:none;
   border:none;
   transition:.6s;
-}
-
-#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto:hover{
-  cursor:pointer;
-}
-#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto::after{
-  display:block;
-  border-right:solid white 2px;
-  content:"";
-  width:100%;
-  height:2px;
 }
 #projetos > #todos_os_projetos > div.um{
   border-color:rgb(163, 8, 8);
@@ -645,7 +634,7 @@ section.flex > .flex > svg{
   }
   #projetos > #todos_os_projetos > div.projeto{
     width:80%;
-    height:200px;
+    height:160px;
   }
   #projetos > #todos_os_projetos > div.projeto button{
     font-size:1.6rem;
@@ -748,6 +737,7 @@ section.flex > .flex > svg{
   font-size:1.6rem;
   font-weight:600;
   margin:0px 0px 20px 20px;
+  color:#fff;
 }
 
 #conhecimentos > #area_de_habilidades > p{

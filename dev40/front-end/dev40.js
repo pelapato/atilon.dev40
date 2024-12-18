@@ -56,7 +56,19 @@ const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
 const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
+
+const tema_principal = document.querySelector("#tema_principal");
+const ceta = document.querySelector("#ceta");
+
+const data = new Date();
+const h = data.getHours();
+const m = data.getMinutes();
+const s = data.getSeconds();
+console.log("sao: "+h+" horas e: "+m+" minutos e: "+s+"segundos");
+
 var verificador = 1;
+
+
 
 const sistema_de_tema=()=>{
     btn_tema.addEventListener('click',()=>{
@@ -64,6 +76,23 @@ const sistema_de_tema=()=>{
     })
     secao_tema.addEventListener('mouseleave',()=>{
         secao_tema.classList.remove("secao_tema");
+    })
+    btn_sub_tema.map((e,ind)=>{
+        e.addEventListener('click',()=>{
+            let srcSvg = e.firstElementChild.attributes[0].textContent
+            tema_principal.setAttribute('src',`${srcSvg}`)
+            if(ind==0){
+                window.document.querySelector("header").style.background="black";
+                window.document.querySelector("#inicio,#projetos").style.background="white";
+                window.document.querySelector("#projetos").style.background="white";
+                window.document.querySelector("#conhecimentos").style.background="white";
+                let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
+                inicioEl.map((e)=>{
+                    e.style.color="black";
+                    window.document.querySelector("h3").style.color="#333333";
+                })
+            }
+        })
     })
 }
 sistema_de_tema();
