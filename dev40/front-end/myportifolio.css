@@ -592,6 +592,13 @@ section.flex > .flex > svg{
 #projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto:hover{
   cursor:pointer;
 }
+#projetos > #todos_os_projetos > div.projeto  button.btn_acessar_projeto::after{
+  display:block;
+  border-right:solid white 2px;
+  content:"";
+  width:100%;
+  height:2px;
+}
 #projetos > #todos_os_projetos > div.um{
   border-color:rgb(163, 8, 8);
 }
@@ -835,24 +842,6 @@ footer > strong > img{
 .txt-animation{
   visibility:hidden;
 }
-
-h1,h2,h3,h4,h5{
-  color:#fff !important;
-}
-.header{
-  background:black;
-}
-/*Tema do portifolio css*/
-.titulo{
-  color:black !important;
-}
-.a{
-  color:rgba(255, 255, 255, 0.521);
-}
-.paragrafo{
-  color:rgba(0, 0, 0, 0.589) !important;
-}
-.ligth_sobre_mim{
-  background:transparent !important;
-  border:solid .1px rgba(173, 173, 173, 0.541);
+h1,h4{
+  color:#fff;
 }
