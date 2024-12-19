@@ -61,10 +61,11 @@ const tema_principal = document.querySelector("#tema_principal");
 const ceta = document.querySelector("#ceta");
 
 const data = new Date();
-const h = data.getHours();
+//let hora = data.getHours();
 const m = data.getMinutes();
 const s = data.getSeconds();
-console.log("sao: "+h+" horas e: "+m+" minutos e: "+s+"segundos");
+let hora = 10;
+console.log("sao: "+hora+" horas e: "+(m - 20)+" minutos e: "+s+"segundos");
 
 var verificador = 1;
 
@@ -77,7 +78,7 @@ const sistema_de_tema=()=>{
     secao_tema.addEventListener('mouseleave',()=>{
         secao_tema.classList.remove("secao_tema");
     })
-    btn_sub_tema.map((e,ind)=>{
+    btn_sub_tema.map((e,ind,vetor)=>{
         e.addEventListener('click',()=>{
             let srcSvg = e.firstElementChild.attributes[0].textContent
             tema_principal.setAttribute('src',`${srcSvg}`)
@@ -91,7 +92,18 @@ const sistema_de_tema=()=>{
                     e.style.color="black";
                     window.document.querySelector("h3").style.color="#333333";
                 })
-            }
+            }//noite
+            else if(ind==1){
+                window.document.querySelector("header").style.background="rgb(5, 8, 17)";
+                window.document.querySelector("#inicio,#projetos").style.background="rgb(5, 8, 17)";
+                window.document.querySelector("#projetos").style.background="rgb(5, 8, 17)";
+                window.document.querySelector("#conhecimentos").style.background="rgb(5, 8, 17)";
+                let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
+                inicioEl.map((e)=>{
+                    e.style.color="white";
+                    window.document.querySelector("h3").style.color="rgb(40, 40, 41)";
+                })
+            }//noite
         })
     })
 }
