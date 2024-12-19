@@ -15,19 +15,18 @@
   border-radius:20px;
 }
 #ani{
-  position:absolute;
-  top:0;
+  position:fixed;
+  bottom:100vh;
   left:0;
   display:flex;
   align-items:center;
   justify-content:center;
   width:100%;
-  height:100vh;
   gap:20px;
-  z-index:-1;
+  z-index:1;
 }
 #ani > i::after{
-  animation:ani 2s infinite calc(18s / var(--i));
+  animation:ani 2s infinite calc(100s / var(--i));
   display:inline-block;
   content:"";
   width:30px;
@@ -37,12 +36,12 @@
 }
 @keyframes ani{
   0%{
-    transform:translateY(100vh) scale(.1);
-    opacity:.5;
+    transform:translateY(200vh) scale(.1);
+    opacity:0;
   }
   100%{
     transform:translateY(0vh) scale(.3);
-    opacity:0;
+    opacity:0.2;
   }
 }
 
@@ -51,6 +50,7 @@ body{
   height:100dvh;
   background:rgb(5, 8, 17);
   font-family:"Poppins",sans-serif;
+  overflow:hidden;
 }
 /*Parte da navega;ao onde contem os links,logo etc...*/
 header{
