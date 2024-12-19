@@ -85,6 +85,7 @@ const sistema_de_tema=()=>{
             if(ind==0){
                 window.document.querySelector("header").style.background="black";
                 window.document.querySelector("#inicio,#projetos").style.background="white";
+                window.document.querySelector("#inicio,#projetos").style.transition=".5s";
                 window.document.querySelector("#projetos").style.background="white";
                 window.document.querySelector("#conhecimentos").style.background="white";
                 let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
