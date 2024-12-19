@@ -24,11 +24,12 @@
   width:100%;
   height:100vh;
   gap:20px;
-  z-index:1;
+  z-index:-1;
 }
-#ani > i{
-  animation:ani 2s infinite calc(180s / var(--i));
-  display:block;
+#ani > i::after{
+  animation:ani 2s infinite calc(18s / var(--i));
+  display:inline-block;
+  content:"";
   width:30px;
   height:30px;
   border-radius:50%;
@@ -37,7 +38,7 @@
 @keyframes ani{
   0%{
     transform:translateY(100vh) scale(.1);
-    opacity:.3;
+    opacity:.5;
   }
   100%{
     transform:translateY(0vh) scale(.3);
