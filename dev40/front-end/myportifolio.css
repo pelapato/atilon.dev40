@@ -15,7 +15,7 @@
   border-radius:20px;
 }
 #ani{
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   display:flex;
@@ -24,7 +24,7 @@
   width:100%;
   height:100vh;
   gap:20px;
-  z-index:-1;
+  z-index:1;
 }
 #ani > i{
   animation:ani 2s infinite calc(180s / var(--i));
@@ -32,12 +32,12 @@
   width:30px;
   height:30px;
   border-radius:50%;
-  background:rgb(1,255,107);
+  background:rgba(1, 255, 107, 0.63);
 }
 @keyframes ani{
   0%{
     transform:translateY(100vh) scale(.1);
-    opacity:.5;
+    opacity:.3;
   }
   100%{
     transform:translateY(0vh) scale(.3);
