@@ -14,6 +14,37 @@
   background:rgb(1, 255, 107);
   border-radius:20px;
 }
+#ani{
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:100vh;
+  gap:20px;
+  z-index:-1;
+}
+#ani > i{
+  animation:ani 2s infinite calc(180s / var(--i));
+  display:block;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:rgb(1,255,107);
+}
+@keyframes ani{
+  0%{
+    transform:translateY(100vh) scale(.1);
+    opacity:.5;
+  }
+  100%{
+    transform:translateY(0vh) scale(.3);
+    opacity:0;
+  }
+}
+
 body{
   width:100%;
   height:100dvh;
@@ -271,6 +302,7 @@ section.flex > .flex:nth-child(1){
   align-items:center;
   justify-content:center;
   flex-direction:column;
+  z-index:2;
 }
 section.flex > .flex:last-child{
   position:relative;
