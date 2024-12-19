@@ -83,6 +83,7 @@ const sistema_de_tema=()=>{
             let srcSvg = e.firstElementChild.attributes[0].textContent
             tema_principal.setAttribute('src',`${srcSvg}`)
             if(ind==0){
+                window.document.querySelector("header").style.background="black";
                 window.document.querySelector("#inicio,#projetos").style.background="white";
                 window.document.querySelector("#inicio,#projetos").style.transition=".5s";
                 window.document.querySelector("#projetos").style.background="white";
@@ -94,13 +95,14 @@ const sistema_de_tema=()=>{
                 })
             }//noite
             else if(ind==1){
+                window.document.querySelector("header").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#inicio,#projetos").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#projetos").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#conhecimentos").style.background="rgb(5, 8, 17)";
                 let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
                 inicioEl.map((e)=>{
                     e.style.color="white";
-                    window.document.querySelector("h3").style.color="rgba(200, 206, 207, 0.67)";
+                    window.document.querySelector("h3").style.color="rgb(40, 40, 41)";
                 })
             }//noite
         })
