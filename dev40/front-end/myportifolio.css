@@ -14,6 +14,9 @@
   background:rgb(1, 255, 107);
   border-radius:20px;
 }
+html,body{
+  scroll-behavior: smooth;
+}
 body{
   width:100%;
   height:100dvh;
@@ -588,16 +591,31 @@ section.flex > .flex > svg{
   border:none;
   transition:.6s;
 }
-#projetos > #todos_os_projetos > div.um{
+hr{
+  width:0px;
+  border-radius:20% 0px;
+  transition: .4s;
+}
+#projetos >   a > h3:hover  > hr {
+  width:100px;
+}
+#todos_os_projetos > div a:hover >hr {
+  width:100px;
+}
+#projetos > #todos_os_projetos > div.um,
+#projetos > #todos_os_projetos > div.um  hr{
   border-color:rgb(163, 8, 8);
 }
-#projetos > #todos_os_projetos > div.dois{
+#projetos > #todos_os_projetos > div.dois,
+#projetos > #todos_os_projetos > div.dois hr{
   border-color:rgb(10, 10, 146);
 }
-#projetos > #todos_os_projetos > div.tres{
+#projetos > #todos_os_projetos > div.tres,
+#projetos > #todos_os_projetos > div.tres hr{
   border-color:rgb(95, 6, 179);
 }
-#projetos > #todos_os_projetos > div.quatro{
+#projetos > #todos_os_projetos > div.quatro,
+#projetos > #todos_os_projetos > div.quatro hr{
   border-color:transparent;
 }
 #projetos > #todos_os_projetos > div.quatro:hover{
@@ -635,6 +653,9 @@ section.flex > .flex > svg{
   #projetos > #todos_os_projetos > div.projeto{
     width:80%;
     height:160px;
+  }
+  hr{
+    width:100px;
   }
   #projetos > #todos_os_projetos > div.projeto button{
     font-size:1.6rem;

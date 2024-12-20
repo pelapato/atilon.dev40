@@ -50,7 +50,7 @@ console.log(escrever);
 const menu = document.querySelector("#menu");
 const menu_linha = document.querySelector("#linha");
 const nav = document.querySelector("nav");
-
+const links = [...document.querySelectorAll(".link")]
 //header - menu - tema
 const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
@@ -119,15 +119,21 @@ var sistema_de_menu_verify = 1;
 
 const sistema_de_menu=()=>{
     menu.addEventListener('click',()=>{
-        menu_linha.classList.toggle("lin");
-
         sistema_de_menu_verify++
         let verify_cont =(sistema_de_menu_verify%2==0) ? true : false;  
         if(verify_cont){
             nav.classList.add("menu_ativo");
+            menu_linha.classList.add("lin");
         }else{
             nav.classList.remove("menu_ativo");
+            menu_linha.classList.remove("lin");
         }
+    })
+    links.map((e)=>{
+        e.addEventListener('click',()=>{
+            nav.classList.remove("menu_ativo");
+            menu_linha.classList.remove("lin");
+        })
     })
 }
 sistema_de_menu()
