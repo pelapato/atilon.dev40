@@ -110,7 +110,10 @@ hr{
     form{
         width:80%;
     }
-    div:nth-last-child(2){
+    div:nth-child(2){
+        display:none;
+    }
+    img{
         display:none;
     }
 }
