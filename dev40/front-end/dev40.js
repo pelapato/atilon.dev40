@@ -56,6 +56,10 @@ const btn_tema = document.querySelector("#btn_tema");
 const secao_tema = document.querySelector("#sistema-de-tema > ul");
 const btn_sub_tema = [...document.querySelectorAll(".btn_sub_tema")];
 
+const logo = document.querySelector("#logo_header");
+
+const projetos = [...document.querySelectorAll(".projeto")];
+const titulos = [...document.querySelectorAll("#projetos h1,#conhecimentos h3,#conhecimentos p")];
 
 const tema_principal = document.querySelector("#tema_principal");
 const ceta = document.querySelector("#ceta");
@@ -82,27 +86,35 @@ const sistema_de_tema=()=>{
         e.addEventListener('click',()=>{
             let srcSvg = e.firstElementChild.attributes[0].textContent
             tema_principal.setAttribute('src',`${srcSvg}`)
+            let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
             if(ind==0){
                 window.document.querySelector("header").style.background="black";
                 window.document.querySelector("#inicio,#projetos").style.background="white";
                 window.document.querySelector("#inicio,#projetos").style.transition=".5s";
                 window.document.querySelector("#projetos").style.background="white";
                 window.document.querySelector("#conhecimentos").style.background="white";
-                let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
                 inicioEl.map((e)=>{
                     e.style.color="black";
                     window.document.querySelector("h3").style.color="#333333";
                 })
-            }//noite
+                titulos.map((e)=>{
+                    e.style.color="rgb(5,8,17)";
+                })
+                projetos.map((e)=>{
+                    e.style.background="rgb(5, 8, 17)";
+                })
+            }//light
             else if(ind==1){
                 window.document.querySelector("header").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#inicio,#projetos").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#projetos").style.background="rgb(5, 8, 17)";
                 window.document.querySelector("#conhecimentos").style.background="rgb(5, 8, 17)";
-                let inicioEl = [...document.querySelectorAll("#inicio > div > article > #nome,.h1")];
                 inicioEl.map((e)=>{
                     e.style.color="white";
-                    window.document.querySelector("h3").style.color="rgb(40, 40, 41)";
+                    window.document.querySelector("h3").style.color="rgb(187, 187, 187)";
+                })
+                titulos.map((e)=>{
+                    e.style.color="white";
                 })
             }//noite
         })
@@ -110,10 +122,6 @@ const sistema_de_tema=()=>{
 }
 sistema_de_tema();
 
-
-//conhecimento
-const linguaguem = [...document.querySelectorAll("#linguaguems > div")];
-const texto_linguaguem = document.querySelector("#texto_linguaguem");
 
 var sistema_de_menu_verify = 1;
 
@@ -137,9 +145,13 @@ const sistema_de_menu=()=>{
     })
 }
 sistema_de_menu()
-//efeito de hover nas habilidades
+
+//conhecimento
+const linguaguem = [...document.querySelectorAll("#linguaguems > div")];
+const texto_linguaguem = document.querySelector("#texto_linguaguem");
+
 const efeito_de_mouse=()=>{
-    const info = ["html","css","nodejs","boostrap","python","java script","mysql","unity","csharp","figma"]
+    const info = ["Linguegem De Marcacao Para Web.Responsavel Pelos Elementos Visuais.","Lingugem De Estilizacao Voltada Para Designer Na Web","Responsavel Por Criar Aplicacoes Back-End Dentro E Fora Do Navegador.","Framework Para Criacao de Sites Responsivos E Dinamicos Para Dispositivos Moveis.","Linguagem Back-End Responsavel Por Trabalhar Com IA E Gerenciamento De Sistema.","Linguagem Responsavel Por Da Interatividade Na Web.","Gerenciador De Bancos De dados Altamente Poderoso Com NodeJs","Engine Responsavel Por criar Jogos 2D E 3D.","Linguagem Para Criar Jogos e Sites,Usada Com foco Na Unity","Softwer Que Permite Trabalhar Com Designer Na Web Na Interface Do Usuario(UI) E Experiencia do usuario(UX)."]
 
     linguaguem.map((e,ind,vetor)=>{
         e.addEventListener('mousemove',(evt)=>{
