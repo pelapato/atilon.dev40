@@ -518,7 +518,7 @@ section.flex > .flex > svg{
     height:100%;
     width:100%;
   }  
-  #mim > #sobre-mim > div > .foto #minha_foto{
+  #mim > #sobre-mim > div  .foto #minha_foto{
     display:none;
   }
   #mim > #sobre-mim > div  .eu{
