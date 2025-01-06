@@ -20,7 +20,7 @@ body{
     align-items:center;
     width:100%;
     height:100dvh;
-    background:rgb(15, 15, 15);
+    background:rgb(5, 8, 17);
     color:white;
     z-index:1;
 }
@@ -29,10 +29,16 @@ div{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background:rgb(15, 15, 15);
+    background:rgba(1, 1, 14, 0.37);
     width:100%;
     height:100vh;
     padding:20px 20px 20px 0px;
+}
+div:nth-child(1){
+    width:80%;
+}
+body > div:nth-last-child(2){
+    background:rgb(2, 3, 19);
 }
 form{
     display:flex;
@@ -40,14 +46,15 @@ form{
     justify-content:center;
     flex-direction:column;
     border-radius:4px;
-    width:30%;
+    width:60%;
     height:100vh;
     gap:14px;
     z-index:2;
 }
 form > h1{
-    font-size:1rem;
-    font-weight:400;
+    color:rgb(1,255,107);
+    font-size:1.1rem;
+    font-weight:600;
     align-self:start;
     margin:20px 0px 0px 0px;
 }
@@ -57,19 +64,16 @@ form > label{
     justify-content:center;
     flex-direction:column;
     width:100%;
-    color:#ffffffb2;
-    font-weight:300;
 }
 form >label >  input{
     width:90%;
-    height:25px;
-    background:rgb(41, 41, 41);
-    border:solid rgb(31, 30, 30) 1px;
-    border-radius:5px;
+    height:20px;
+    background:transparent;
+    border:solid rgb(1,255,107) 1px;
+    border-radius:20px 0px 20px 0px;
     color:rgb(1,255,107);
     margin:14px 0px;
     padding:8px 9px;
-    outline:none;
 }
 textarea{
     width:100%;
@@ -88,26 +92,20 @@ form button{
     border:none;
 }
 ::placeholder{
-    color:rgba(255, 255, 255, 0.719);
+    color:white;
     padding:3px 5px;
 }
 img{
     width:480PX;
 }
-h1::after{
-    display:inline-flex;
-    content:"";
-    width:70%;
-    height:1px;
-    background-image:linear-gradient(to right,
-    transparent,
-    rgb(1,255,107) 40%,
-    rgb(1,255,107)
-  );
+hr{
+    width:100%;
+    border-color:rgb(1,255,107);
 }
 @media(max-width:1200px){
     div{
         width:100%;
+        background:transparent;
     }
     form{
         width:80%;
